@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.height-container {
+    width: 390px;
+    height: 844px; /* Fixed height */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 30px 40px;
+    background-color: #2C2C2C;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.left-content {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.page-desc {
+    font-size: 14px;
+    color: #aaaaaa;
+    line-height: 1.5;
+}
+
+.main-display {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Ruler on left, text on right? Image shows ruler left, text right */
+    gap: 40px;
+    padding-left: 20px;
+}
+
+/* Ruler Wrapper */
+.ruler-wrapper {
+    position: relative;
+    width: 80px;
+    height: 400px; /* Fixed viewing area */
+    /* Mask vertical */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+}
+
+.ruler-scroller {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    align-items: flex-start; 
+    scrollbar-width: none;
+    padding: 50% 0; /* Center first/last */
+    scroll-snap-type: y mandatory;
+}
+
+.ruler-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.tick-wrapper {
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    scroll-snap-align: center;
+}
+
+.tick {
+    height: 2px;
+    background-color: #666;
+    border-radius: 2px;
+}
+
+.tick.short {
+    width: 30px;
+}
+
+.tick.long {
+    width: 60px;
+    background-color: #5865F2; /* Long ticks blueish? Image shows blueish lines */
+    background-color: #666; /* Keep grey, highlight center line is separate */
+    width: 50px;
+}
+
+.center-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 80px; /* Width of ruler wrapper */
+    height: 4px;
+    background-color: #5865F2; /* Blue highlight line */
+    z-index: 10;
+    border-radius: 2px;
+}
+
+.height-text {
+    display: flex;
+    align-items: baseline;
+}
+
+.height-value {
+    font-size: 80px;
+    font-weight: 700;
+    color: #5865F2;
+    margin-right: 5px;
+}
+
+.height-unit {
+    font-size: 24px;
+    color: #5865F2; /* Image has white 'cm'? No, image has blue 'cm' */
+    color: #ffffff;
+    opacity: 0.8; /* Let's check image... 'cm' looks white/greyish */
+}
+
+
+.bottom-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.btn {
+    height: 56px;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+}
+
+.btn:active {
+    opacity: 0.8;
+}
+
+.btn-prev {
+    flex: 1;
+    background-color: #444;
+    color: #ffffff;
+}
+
+.btn-next {
+    flex: 1;
+    background-color: #5865F2;
+    color: #ffffff;
+}
+
+@media (max-width: 390px) {
+    .height-container {
+        width: 100%;
+    }
+}

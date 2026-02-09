@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL GYM - 통합회원권</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .membership-container {
+            width: 390px;
+            height: 844px;
+            background: linear-gradient(180deg, #1a1a1a 0%, #2a2a2a 100%);
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 80px 20px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Lens Flare Effect */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            filter: blur(40px);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: #ffffff;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 44px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 40px;
+            letter-spacing: -1.5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Collage Grid Redesign */
+        .collage-container {
+            position: relative;
+            width: 100%;
+            height: 520px; /* Increased to account for bike image */
+            margin-top: 20px;
+        }
+
+        .collage-img {
+            position: absolute;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Gym with punching bags - Top Right (Tall) */
+        .img-tall {
+            width: 130px;
+            height: 200px;
+            top: 0;
+            right: 15px;
+            z-index: 2;
+        }
+
+        /* Kettlebell - Top Left Square */
+        .img-top-left {
+            width: 110px;
+            height: 110px;
+            top: 100px;
+            left: 35px;
+            z-index: 3;
+        }
+
+        /* Pilates Reformers - Bottom Left Square */
+        .img-bot-left {
+            width: 145px;
+            height: 145px;
+            top: 220px;
+            left: -5px;
+            z-index: 1;
+        }
+
+        /* Treadmills Big - Middle Right */
+        .img-big {
+            width: 200px;
+            height: 200px;
+            top: 215px;
+            right: -20px;
+            z-index: 4;
+        }
+
+        /* Bikes - Bottom Right */
+        .img-bot-right {
+            width: 150px;
+            height: 150px;
+            top: 425px;
+            right: -20px;
+            z-index: 1;
+        }
+
+        /* Info Section */
+        .info-section {
+            padding: 40px 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-heading {
+            font-size: 32px;
+            font-weight: 700;
+            color: #7B8CFF; /* Periwinkle from image */
+            margin-bottom: 25px;
+        }
+
+        .section-desc {
+            font-size: 16px;
+            color: #fff;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        /* Icon Grid -> Info Cards */
+        .info-card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            align-items: center;
+        }
+
+        .info-card {
+            width: 320px;
+            height: 140px;
+            background-color: #2a2a2a; /* Slightly lighter than main bg #1a1a1a */
+            border-radius: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100px;
+        }
+
+        .info-item img {
+            max-width: 80px;
+            max-height: 70px;
+            object-fit: contain;
+        }
+
+        /* Keep labels slightly light */
+        .info-item span {
+            font-size: 15px;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .plus-circle {
+            width: 24px;
+            height: 24px;
+            background-color: #444;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 25px; /* Offset for icons label */
+        }
+
+        /* FAQ Section Redesign */
+        .faq-section {
+            padding: 40px 20px;
+        }
+
+        .faq-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: url('img/shape.png') no-repeat center;
+            background-size: 100% 100%;
+            color: #222; /* Changed text color to match image if needed, or keep white if shape is blue. Image shows dark text on light badge. */
+            color: #5865F2; /* Actually in image it looks like a blue badge with dark or white text. Let's stick to user's shape.png */
+            padding: 12px 24px 18px; /* Adjusted for shape tail */
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 35px;
+            min-width: 150px;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .faq-item {
+            background: none; /* Removed background */
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            padding-left: 5px;
+        }
+
+        .q-icon {
+            background: #5865F2;
+            color: #fff;
+            width: 22px;
+            height: 22px;
+            border-radius: 8px; /* Requested radius 8 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .q-text {
+            font-size: 17px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.2;
+        }
+
+        .faq-answer {
+            background: rgba(151, 163, 255, 0.15); /* #97A3FF with 15% opacity */
+            border-radius: 14px; /* Requested radius 14 */
+            padding: 20px;
+            font-size: 14px; /* Requested size 14 */
+            font-weight: 300; /* Requested weight 300 */
+            color: #ddd;
+            line-height: 1.8; /* Reqeusted line gap 18? Assuming 18px or 1.8 ratio. 18px for 14px font is ~1.3. Let's try 18px. */
+            line-height: 22px; /* 18px line gap sounds like the gap BETWEEN lines. Total line-height would be font + gap. Let's use 22px. */
+            margin-left: 0;
+        }
+
+        /* Footer CTA Redesign */
+        .footer-cta-area {
+            background-color: #DDE2FF; /* Light Periwinkle */
+            padding: 50px 30px 60px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cta-text {
+            font-size: 16px;
+            color: #222;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .cta-btn {
+            width: 100%;
+            height: 60px;
+            background: #5865F2;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-size: 19px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
+        }
+
+        .cta-btn:active {
+            opacity: 0.8;
+        }
+
+        /* Scrollbar styling */
+        .membership-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .membership-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .membership-container::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <div class="membership-container" style="display:flex; flex-direction:column; overflow:hidden;">
+        <div class="content-scroll-wrapper">
+        
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <p class="hero-subtitle">여러 가지 운동을 하나의 회원권으로<br>최대 할인을 받고 즐길 수 있는 방법</p>
+            <h1 class="hero-title">올짐 통합회원권</h1>
+            
+            <div class="collage-container">
+                <img src="img/membership1.png" alt="헬스장" class="collage-img img-top-left">
+                <img src="img/membership2.png" alt="헬스장" class="collage-img img-tall">
+                <img src="img/membership3.png" alt="헬스장" class="collage-img img-bot-left">
+                <img src="img/membership4.png" alt="헬스장" class="collage-img img-big">
+                <img src="img/membership5.png" alt="헬스장" class="collage-img img-bot-right">
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="info-section">
+            <h2 class="section-heading">통합회원권이란?</h2>
+            <p class="section-desc">원하는 시설을 최대 4곳까지 최대 80%<br>할인가로 함께 이용할 수 있는 회원권입니다.</p>
+            
+            <div class="info-card-list">
+                <!-- Card 1 -->
+                <div class="info-card">
+                    <div class="info-item">
+                        <img src="img/home.png" alt="집">
+                        <span>집 근처</span>
+                    </div>
+                    <div class="plus-circle">+</div>
+                    <div class="info-item">
+                        <img src="img/company.png" alt="회사">
+                        <span>회사 근처</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="info-card">
+                    <div class="info-item">
+                        <img src="img/health.png" alt="헬스">
+                        <span>헬스</span>
+                    </div>
+                    <div class="plus-circle">+</div>
+                    <div class="info-item">
+                        <img src="img/pilates.png" alt="필라테스">
+                        <span>필라테스</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="faq-badge">통합회원권 FAQ</div>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="q-icon">Q</span>
+                        <span class="q-text">시설마다 이용 기간이 달라도 되나요?</span>
+                    </div>
+                    <div class="faq-answer">
+                        가능합니다! 운동시설 별로 원하는 기간을 선택하여 자유롭게 나만의 회원권을 만들어 보세요.<br>단, 기간이 달라도 운동시작일은 동일하게 적용됩니다.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="q-icon">Q</span>
+                        <span class="q-text">운동시설을 따로 결제하면 안되나요?</span>
+                    </div>
+                    <div class="faq-answer">
+                        통합회원권 할인은 시설 2~3곳을 한번에 결제해야 자동으로 할인이 적용됩니다.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="q-icon">Q</span>
+                        <span class="q-text">운동시설 출석 방법이 궁금해요.</span>
+                    </div>
+                    <div class="faq-answer">
+                        통합회원권 구매 시, 올짐앱 홈 화면과 마이올짐 페이지에서 'QR 출석하기' 버튼이 생성됩니다.<br>
+                        올짐앱에서 'QR 출석하기' 버튼을 누른 후, 운동시설에 비치된 QR코드를 찍으면 출석이 완료됩니다.<br><br>
+                        (운동시설에 따라 얼굴인식 출입, 출석프로그램 입력 등 출석 방식이 다를 수 있으니, 시설에서 안내하는 방식으로 출석해 주세요.)
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="q-icon">Q</span>
+                        <span class="q-text">출석 포인트 적립 방식이 궁금해요.</span>
+                    </div>
+                    <div class="faq-answer">
+                        올짐앱에서 출석 즉시 포인트가 자동으로 지급됩니다.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer CTA -->
+        <div class="footer-cta-area">
+            <p class="cta-text">여러 곳 등록하고 싶지만 가격이 고민될때,<br>올짐 통합회원권으로 저렴하게 이용하세요.</p>
+            <button class="cta-btn">통합회원권 만들기</button>
+        </div>
+
+    </div>
+    
+    <nav class="global-footer">
+        <a href="menu.html" class="footer-item active">
+            <span class="material-symbols-outlined">home</span>
+        </a>
+        <a href="map.html" class="footer-item">
+            <span class="material-symbols-outlined">location_on</span>
+        </a>
+        <a href="favorite.html" class="footer-item">
+            <span class="material-symbols-outlined">favorite</span>
+        </a>
+        <a href="setting.html" class="footer-item">
+            <span class="material-symbols-outlined">person</span>
+        </a>
+    </nav>
+    </div>
+</body>
+
+</html>

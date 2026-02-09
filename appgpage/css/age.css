@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.age-container {
+    width: 390px;
+    height: 844px; /* Fixed height as requested */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 30px 40px;
+    background-color: #2C2C2C;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.top-content {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.page-desc {
+    font-size: 16px;
+    color: #aaaaaa;
+    line-height: 1.5;
+}
+
+/* Picker Wrapper */
+.picker-wrapper {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    /* Use mask to fade out top and bottom */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The fixed highlight bar in the center */
+.highlight-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 60px; /* Slightly taller than item height */
+    border-top: 2px solid #5865F2;
+    border-bottom: 2px solid #5865F2;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.number-scroller {
+    width: 100%;
+    height: 250px; /* Show approx 5 items (50px each) */
+    overflow-y: auto;
+    scroll-behavior: smooth; /* For programmatic scroll */
+    scroll-snap-type: y mandatory;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: relative;
+    padding-top: 100px; /* (250 / 2) - (50 / 2) = 125 - 25 = 100px padding to center first item */
+    padding-bottom: 100px;
+}
+
+.number-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.number-item {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #666;
+    scroll-snap-align: center;
+    transition: all 0.2s;
+}
+
+.number-item.active {
+    font-size: 40px;
+    font-weight: 700;
+    color: #5865F2;
+}
+
+.bottom-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.btn {
+    height: 56px;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+}
+
+.btn:active {
+    opacity: 0.8;
+}
+
+.btn-prev {
+    flex: 1;
+    background-color: #444;
+    color: #ffffff;
+}
+
+.btn-next {
+    flex: 1;
+    background-color: #5865F2;
+    color: #ffffff;
+}
+
+@media (max-width: 390px) {
+    .age-container {
+        width: 100%;
+    }
+}

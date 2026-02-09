@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.detail-container {
+    width: 390px;
+    height: 844px; /* Fixed height with scroll */
+    min-height: 844px;
+    background-color: #fff; /* White background based on image */
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+.detail-container::-webkit-scrollbar { display: none; }
+
+/* Header */
+.header-section {
+    position: relative;
+    height: 200px;
+    margin-bottom: 60px; /* Space for profile overflow */
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-img img {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* object-fit: cover; */
+    filter: brightness(0.8);
+}
+
+.heart-icon {
+    position: absolute;
+    top: 200px; /* Below banner? Or on banner? Image shows it below banner right side approx? Let's check. Actually visual shows it top right of PROFILE name area usually or on image. Let's put top right of content for now or top right of banner. Based on provided image, it is top right below image? No, top right of whole page white area. Let's place it absolutely. */
+    right: 20px;
+    bottom: -30px; /* Inside header section relative */
+    width: 24px;
+    height: 24px;
+    z-index: 10;
+}
+.heart-icon img { /* width: 100%; */ /* height: 100%; */ filter: invert(0.5); }
+
+.profile-circle {
+    position: absolute;
+    bottom: -50px; /* Half overlap */
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    overflow: hidden;
+    background-color: #eee;
+    z-index: 5;
+}
+
+.profile-circle img {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* object-fit: cover; */
+}
+
+/* Basic Info */
+.basic-info {
+    padding: 0 20px 20px;
+}
+
+.t-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.t-gym {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+.t-loc {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Intro Bubble */
+.intro-section {
+    padding: 0 20px 30px;
+}
+
+.intro-bubble {
+    background-color: #F0F5FF; /* Pale blue */
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 12px;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+}
+/* Optional speech arrow if needed */
+
+/* Rating */
+.section {
+    padding: 0 20px 30px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.rating-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chart-box {
+    width: 140px;
+    height: 140px;
+    flex-shrink: 0;
+}
+.chart-box img { /* width: 100%; */ /* height: 100%; */ /* object-fit: contain; */ }
+
+.rating-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.star-score {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5865F2;
+    margin-bottom: 5px;
+}
+
+.rating-desc {
+    font-size: 11px;
+    color: #666;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.btn-consult {
+    background-color: #5865F2;
+    color: #fff;
+    border: none;
+    padding: 8px 0;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100px;
+}
+
+/* Lists */
+.info-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.info-list li {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Social */
+.social-links {
+    display: flex;
+    gap: 15px;
+    padding: 0 20px 30px;
+}
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.social-item img {
+    width: 40px; /* Icon size */
+    height: 40px;
+    /* Custom gradient border styling if icon is simple, but using image */
+    border-radius: 10px;
+}
+
+.social-item span {
+    font-size: 10px;
+    color: #666;
+}
+
+/* Membership */
+.membership-list {
+    background-color: #f5f5f5;
+    padding: 30px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.membership-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.m-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.m-count {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    width: 40px;
+}
+
+.m-original {
+    font-size: 12px;
+    color: #bbb;
+    text-decoration: line-through;
+}
+
+.m-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.m-discount {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5865F2; /* Blue */
+}
+
+.m-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+
+.badge-event {
+    background-color: #5865F2;
+    color: #fff;
+    font-size: 8px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    position: absolute;
+    top: 5px;
+    right: 5px; /* Needs relative parent if inside */
+}
+/* Re-adjust relative positioning for event badge */
+.membership-item { position: relative; }
+
+.cart-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+}
+
+@media (max-width: 390px) {
+    .detail-container {
+        width: 100%;
+    }
+}

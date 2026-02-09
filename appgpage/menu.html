@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL GYM - Menu</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="menu-container" style="display:flex; flex-direction:column; overflow:hidden;">
+        <div class="content-scroll-wrapper">
+        <!-- 4 Vertical Buttons -->
+        <div class="menu-list">
+            <button class="menu-btn" id="nearbyBtn">내 주변 운동 시설</button>
+            <button class="menu-btn" id="mapBtn">지도에서 찾기</button>
+            <button class="menu-btn" id="ptBtn">P.T 가격 비교</button>
+            <button class="menu-btn" id="membershipBtn">통합회원권</button>
+        </div>
+    </div>
+    
+    <nav class="global-footer">
+        <a href="menu.html" class="footer-item active">
+            <span class="material-symbols-outlined">home</span>
+        </a>
+        <a href="map.html" class="footer-item">
+            <span class="material-symbols-outlined">location_on</span>
+        </a>
+        <a href="favorite.html" class="footer-item">
+            <span class="material-symbols-outlined">favorite</span>
+        </a>
+        <a href="setting.html" class="footer-item">
+            <span class="material-symbols-outlined">person</span>
+        </a>
+    </nav>
+    </div>
+    
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script>
+        document.getElementById('nearbyBtn').addEventListener('click', () => {
+             window.location.href = 'place.html';
+        });
+        document.getElementById('mapBtn').addEventListener('click', () => {
+             window.location.href = 'map.html';
+        });
+        document.getElementById('ptBtn').addEventListener('click', () => {
+             window.location.href = 'PT.html';
+        });
+        document.getElementById('membershipBtn').addEventListener('click', () => {
+             window.location.href = 'membership.html';
+        });
+    </script>
+</body>
+
+</html>

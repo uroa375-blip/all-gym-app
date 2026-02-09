@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL GYM - Location</title>
+    <link rel="stylesheet" href="css/address.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Meta tag to ensuring Referer is sent correctly (Important for API auth on localhost) -->
+    <meta name="referrer" content="origin-when-cross-origin">
+
+    <!-- Naver Maps API -->
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=tasfkioeua"></script>
+</head>
+
+<body>
+    <div class="location-container">
+        
+        <!-- Header Section -->
+        <div class="top-content">
+            <h1 class="page-title">지역을 알려주세요</h1>
+            <p class="page-desc">계시는 지역의 주변 운동시설을 추천해드립니다.</p>
+        </div>
+
+        <!-- Map Section (Takes remaining space) -->
+        <div id="map" class="map-wrapper" style="width:100%; height:100%;"></div>
+        <!-- Fallback hidden by default if map loads -->
+        <div id="mapPlaceholder" class="map-placeholder" style="display:none;">
+            <img src="img/map2.png" alt="Map Placeholder" class="placeholder-img">
+        </div>
+
+        <!-- Floating Footer Actions -->
+        <div class="bottom-actions">
+            <a href="height.html" class="btn btn-prev">이전</a>
+            <button class="btn btn-next" id="nextBtn">다음</button>
+        </div>
+
+    </div>
+
+    <script>
+        // Check if Naver Map is loaded
+        // Using a slight delay or direct init if script loads synchronously
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof naver !== 'undefined' && naver.maps) {
+                var mapOptions = {
+                    center: new naver.maps.LatLng(37.498095, 127.027610), // Gangnam Station
+                    zoom: 15,
+                    scaleControl: false,
+                    logoControl: false,
+                    mapDataControl: false,
+                    zoomControl: false, // Clean look as per image
+                    minZoom: 10
+                };
+    
+                var map = new naver.maps.Map('map', mapOptions);
+                
+                // Ensure placeholder is hidden and map is shown
+                document.getElementById('map').style.display = 'block';
+                document.getElementById('mapPlaceholder').style.display = 'none';
+
+            } else {
+                console.log('Naver Map API not loaded');
+                document.getElementById('map').style.display = 'none';
+                document.getElementById('mapPlaceholder').style.display = 'block';
+            }
+        });
+
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+             window.location.href = 'favorite.html';
+        });
+    </script>
+</body>
+
+</html>

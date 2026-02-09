@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location-container {
+    width: 390px;
+    height: 844px; /* Fixed height for mobile layout */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #2C2C2C; /* Dark background */
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Header */
+.top-content {
+    padding: 60px 30px 40px; /* Adjust padding */
+    text-align: left;
+    background-color: #2C2C2C;
+    z-index: 10;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.page-desc {
+    font-size: 16px;
+    color: #aaaaaa; /* Gray text */
+    line-height: 1.5;
+}
+
+/* Map Section */
+.map-wrapper {
+    flex: 1; /* Take remaining height */
+    width: 100%;
+    background-color: #ddd; /* Fallback color */
+    position: relative;
+}
+
+.map-placeholder {
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #e0e0e0;
+}
+
+.placeholder-img {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* object-fit: cover; */
+    opacity: 0.8;
+}
+
+/* Footer Actions */
+.bottom-actions {
+    padding: 30px;
+    padding-bottom: 50px; /* Bottom spacing */
+    background-color: #2C2C2C;
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+.btn {
+    height: 56px;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+}
+
+.btn:active {
+    opacity: 0.8;
+}
+
+.btn-prev {
+    flex: 1;
+    background-color: #444444; /* Dark gray for Prev */
+    color: #ffffff;
+}
+
+.btn-next {
+    flex: 1;
+    background-color: #5865F2; /* Primary Blue for Next */
+    color: #ffffff;
+}
+
+@media (max-width: 390px) {
+    .location-container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+}

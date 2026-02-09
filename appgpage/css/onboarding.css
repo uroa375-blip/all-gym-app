@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 4425px;
+}
+
+.onboarding-container {
+    width: 390px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* 배경 이미지 */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/mainpic.png');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    z-index: 1;
+}
+
+/* 어두운 오버레이 */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(88, 104, 245, 0.3) 100%
+    );
+    z-index: 2;
+}
+
+/* 컨텐츠 영역 */
+.content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 80px 0 120px; /* Removed side padding */
+}
+
+/* 상단 텍스트 */
+.top-text {
+    margin-top: 20px;
+    padding: 0 30px; /* Added side padding for text */
+}
+
+.top-text h1 {
+    font-size: 50px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+}
+
+.top-text .highlight {
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.indent-text {
+    margin-left: 50px;
+    display: inline-block;
+}
+
+/* ALL GYM 로고 섹션 */
+.logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+}
+
+.logo-all-img {
+    width: auto; /* Actual size */
+    height: auto;
+    display: block;
+    align-self: flex-start; /* Left align */
+    margin-bottom: 30px;
+}
+
+.logo-gym-img {
+    width: auto; /* Actual size */
+    height: auto;
+    display: block;
+    align-self: flex-end; /* Right align */
+    margin-left: 0;
+}
+
+/* 하단 그라데이션 */
+.bottom-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(
+        to top,
+        #5865F2 0%,
+        rgba(88, 101, 242, 0.8) 30%,
+        rgba(88, 101, 242, 0.4) 60%,
+        transparent 100%
+    );
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* 추가 정보 섹션들 */
+.info-sections {
+    width: 390px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #5568F5 0%, #323DBF 100%);
+}
+
+.info-section {
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section-content {
+    text-align: left;
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+/* Specific styling for longer titles as requested */
+.section-2 .section-title,
+.section-3 .section-title,
+.section-4 .section-title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.section-text {
+    font-size: 24px;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 1.4;
+    opacity: 0.95;
+    letter-spacing: -0.04em;
+}
+
+/* Specific styling for section texts as requested */
+.section-2 .section-text,
+.section-3 .section-text,
+.section-4 .section-text {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+}
+
+.section-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.section-1 .section-image {
+    margin-left: 80px;
+}
+
+.section-image img {
+    /* width: 100%; */
+    /* height: auto; */
+    display: block;
+}
+
+/* 반응형 */
+@media (max-width: 390px) {
+    .onboarding-container,
+    .info-sections {
+        width: 100%;
+    }
+
+    .top-text h1 {
+        font-size: 50px;
+    }
+
+    .logo-all {
+        font-size: 60px;
+    }
+
+    .logo-gym {
+        font-size: 90px;
+    }
+
+    .content {
+        padding: 60px 0px 100px;
+    }
+}
+
+/* ALL GYM POINT Section */
+.point-section {
+    width: 390px;
+    margin: 0 auto;
+    background-color: #222222;
+    padding: 60px 30px 80px; /* Added bottom padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 0 20px 20px; /* Rounded corners at the bottom */
+}
+
+.point-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #7b88ff; /* Periwinkle blue */
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.point-subtitle {
+    font-size: 18px;
+    color: #7b88ff;
+    line-height: 1.4;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+.point-circles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.point-circles .top {
+    margin-bottom: 0;
+}
+
+.circle-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.circle-item {
+    width: 90px;
+    height: 90px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.plus-sign {
+    font-size: 40px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0 5px;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid rgba(255, 255, 255, 0.8); /* Simple arrow */
+    margin-bottom: 40px;
+    /* Optional: gradient effect like image */
+    background: transparent;
+    border-top: 0;
+}
+/* Recreating the arrow look more precisely with an image or gradient if possible, 
+   but for CSS only, let's make a gradient arrow shape or just a simple image. 
+   The image has a blurry gradient arrow. Let's try to mimic a simple arrow first. 
+   Actually, let's use a unicode arrow or CSS shape with a gradient if needed.
+   Let's create a custom gradient arrow.
+*/
+.arrow-down {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.8), transparent);
+    clip-path: polygon(20% 0, 80% 0, 80% 60%, 100% 60%, 50% 100%, 0 60%, 20% 60%);
+    margin-bottom: 50px;
+}
+
+.point-footer {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 40px;
+    /* Curved top border effect in image is subtle, just using simple border for now */
+    position: relative;
+}
+
+/* To mimic the curved separator line in the image */
+.point-footer::before {
+    content: '';
+    position: absolute;
+    top: -20px; /* Adjust based on curvature */
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50% 50% 0 0 / 20px 20px 0 0; 
+    /* This creates a curve, but simpler border-top is safer. Let's stick to simple border or skip curve for MVP */
+    display: none; 
+}
+
+.footer-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-desc {
+    font-size: 14px;
+    color: #999;
+    line-height: 1.6;
+    text-align: center;
+}
+
+@media (max-width: 390px) {
+    .point-section {
+        width: 100%;
+    }
+}

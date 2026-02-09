@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cart-container {
+    width: 390px;
+    height: 844px;
+    background: #ffffff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Tabs */
+.header-tabs {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.tab {
+    flex: 1;
+    padding: 18px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #999;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.tab.active {
+    color: #000;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #000;
+}
+
+/* Content Section */
+.content-section {
+    padding: 30px 24px;
+    flex: 1;
+}
+
+.gym-info {
+    margin-bottom: 24px;
+}
+
+.gym-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.gym-location {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Gym Image */
+.gym-image-container {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    background: #f5f5f5;
+}
+
+.gym-image {
+    /* width: 100%; */
+    /* height: 100%; */
+    /* object-fit: cover; */
+}
+
+/* Price Card */
+.price-card {
+    background: #f8f8f8;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.price-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.membership-badge {
+    font-size: 12px;
+    color: #666;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.delete-icon {
+    width: 20px;
+    height: 20px;
+    color: #999;
+}
+
+.price-info {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.duration {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+
+.original-price {
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.discount-rate {
+    font-size: 18px;
+    font-weight: 700;
+    color: #5865F2;
+}
+
+.final-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+}
+
+/* Quantity Control */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.quantity-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.quantity-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+}
+
+.quantity-btn {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #d0d0d0;
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+    transition: all 0.2s;
+}
+
+.quantity-btn:active {
+    background: #f0f0f0;
+}
+
+.quantity-value {
+    min-width: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* Total Section */
+.total-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #000;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.total-label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+
+.total-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+}
+
+/* Promotion Text */
+.promotion-text {
+    margin-top: 20px;
+    padding: 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.promotion-text p {
+    font-size: 13px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.promotion-highlight {
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Purchase Button */
+.purchase-btn {
+    width: 100%;
+    height: 56px;
+    background: #5865F2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    margin-top: 24px;
+}
+
+.purchase-btn:active {
+    opacity: 0.8;
+}
+
+/* Scrollbar styling */
+.cart-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cart-container::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+.cart-container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}

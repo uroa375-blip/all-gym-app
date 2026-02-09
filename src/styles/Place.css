@@ -1,0 +1,285 @@
+.place-page-container {
+    width: 100%;
+    background-color: #1B1B1B;
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    padding: 30px 0 0 20px;
+}
+
+.section.nearby {
+    background-color: #282828;
+    padding-bottom: 30px;
+}
+
+.section.ranking {
+    background-color: #1B1B1B;
+    padding-bottom: 50px;
+}
+
+.section.ranking .card-item {
+    background-color: transparent;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.scroll-container {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-right: 20px;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.info-box {
+    background-color: rgba(85, 104, 245, 0.5);
+    width: 100%;
+    margin: 20px 0 30px 0; 
+    padding: 30px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    word-break: keep-all;
+}
+
+.info-box p {
+    margin-bottom: 26px;
+}
+
+.info-box p:last-child {
+    margin-bottom: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 0 20px 40px;
+}
+
+.card-item {
+    flex-shrink: 0;
+    width: 164px;
+    background-color: #242424;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 12px;
+}
+
+.card-image-wrap {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.card-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 12px 10px 0;
+    color: #fff;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: #888;
+    cursor: pointer;
+}
+
+.pinkstar-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+
+.price-label {
+    font-size: 14px;
+    color: #888;
+}
+
+.price-value-wrap {
+    display: flex;
+    align-items: baseline;
+}
+
+.price-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.price-unit {
+    font-size: 14px;
+    color: #fff;
+    margin-left: 2px;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag.event {
+    background-color: #C2C9FF;
+    color: #5568F5;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.cart-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-icon-img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+.rank-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    backdrop-filter: blur(4px);
+    z-index: 2;
+}
+
+.section.newly-registered {
+    background-color: #282828;
+    padding-bottom: 40px;
+}
+
+.tag.new-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #5568F5;
+    text-shadow: 0 0 8px #5568F5;
+    z-index: 2;
+}
+
+.newly-registered .card-item {
+    background-color: #1B1B1B;
+    width: 150px;
+}
+
+.newly-registered .card-image-wrap {
+    height: 100px;
+    border-radius: 8px;
+}
+
+.recommend-section {
+    background-color: #282828;
+    padding: 0 20px 40px;
+}
+
+.recommend-title {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    color: #fff;
+    font-size: 14px;
+    width: 60px;
+    flex-shrink: 0;
+}
+
+.form-group input {
+    flex-grow: 1;
+    background-color: #333333;
+    border: none;
+    border-radius: 4px;
+    height: 36px;
+    padding: 0 12px;
+    color: #fff;
+}
+
+.save-btn {
+    width: 50px;
+    height: 28px;
+    background-color: #5568F5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: auto;
+    display: block;
+    margin-top: 5px;
+}

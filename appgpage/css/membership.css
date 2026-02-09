@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.membership-container {
+    width: 390px;
+    height: 844px; /* Fixed height can be tricky if content overflows. Let's allowing scrolling within */
+    min-height: 844px;
+    background-color: #1a1a1a; /* Very dark background */
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+    scrollbar-width: none;
+    position: relative;
+}
+.membership-container::-webkit-scrollbar { display: none; }
+
+/* Hero Section */
+.hero-section {
+    padding: 60px 20px 40px;
+    text-align: center;
+    /* Fancy background glow effect? */
+    background: radial-gradient(circle at 50% 0%, #333 0%, #1a1a1a 70%);
+}
+
+.hero-subtitle {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.hero-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.collage-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.collage-grid {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+.collage-img {
+    position: absolute;
+    /* width: 110px; */
+    /* height: 110px; */
+    /* object-fit: cover; */
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+.img1 { top: 0; left: 20px; z-index: 1; }
+.img2 { top: 30px; right: 20px; z-index: 2; width: 100px; height: 140px; }
+.img3 { bottom: 0; left: 40px; z-index: 3; width: 180px; height: 100px; }
+
+/* Info Section */
+.info-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section-heading {
+    font-size: 20px;
+    font-weight: 700;
+    color: #5865F2; /* Blue title */
+    margin-bottom: 15px;
+}
+
+.section-desc {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.icon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #2a2a2a;
+    border-radius: 15px;
+    padding: 30px 20px;
+}
+
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 80px;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    /* Transparent or subtle bg */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-circle img { /* width: 40px; */ /* height: 40px; */ /* object-fit: contain; */ filter: invert(0.8); /* Make icons light */ }
+
+.icon-box span {
+    font-size: 12px;
+    color: #fff;
+}
+
+.plus-sign {
+    font-size: 24px;
+    font-weight: 700;
+    color: #888;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 20px;
+}
+
+.faq-badge {
+    display: inline-block;
+    background-color: #5865F2;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 0; /* Message bubble style */
+}
+
+.faq-item {
+    margin-bottom: 25px;
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.q-icon {
+    width: 24px;
+    height: 24px;
+    background-color: #5865F2;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.q-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ddd;
+}
+
+.faq-answer {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 12px;
+    color: #aaa;
+    line-height: 1.6;
+    margin-left: 10px;
+}
+
+/* Footer CTA */
+.footer-cta-area {
+    background-color: #DDE2FF; /* Light Periwinkle usually */
+    background-color: #C0C8FF; /* Closer to image */
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta-text {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.cta-btn {
+    width: 100%;
+    height: 56px;
+    background-color: #5865F2;
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(88, 101, 242, 0.4);
+}
+
+@media (max-width: 390px) {
+    .membership-container {
+        width: 100%;
+    }
+}

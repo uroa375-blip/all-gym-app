@@ -1,0 +1,150 @@
+.height-page-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 30px 40px;
+    background-color: #2C2C2C;
+}
+
+.left-content {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.page-desc {
+    font-size: 14px;
+    color: #aaaaaa;
+    line-height: 1.5;
+}
+
+.main-display {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    padding-left: 20px;
+}
+
+.ruler-wrapper {
+    position: relative;
+    width: 80px;
+    height: 400px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+}
+
+.ruler-scroller {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+    scrollbar-width: none;
+    padding: 200px 0;
+    scroll-snap-type: y mandatory;
+}
+
+.ruler-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.tick-wrapper {
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    scroll-snap-align: center;
+}
+
+.tick {
+    height: 2px;
+    background-color: #666;
+    border-radius: 2px;
+}
+
+.tick.short {
+    width: 30px;
+}
+
+.tick.long {
+    width: 50px;
+}
+
+.center-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #5865F2;
+    z-index: 10;
+    border-radius: 2px;
+}
+
+.height-text {
+    display: flex;
+    align-items: baseline;
+}
+
+.height-value {
+    font-size: 60px;
+    font-weight: 700;
+    color: #5865F2;
+    margin-right: 5px;
+}
+
+.height-unit {
+    font-size: 24px;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.bottom-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+    padding-bottom: 40px;
+}
+
+.btn {
+    height: 56px;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+}
+
+.btn:active {
+    opacity: 0.8;
+}
+
+.btn-prev {
+    flex: 1;
+    background-color: #444;
+    color: #ffffff;
+}
+
+.btn-next {
+    flex: 1;
+    background-color: #5865F2;
+    color: #ffffff;
+}

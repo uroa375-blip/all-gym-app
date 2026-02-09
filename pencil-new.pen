@@ -1,0 +1,776 @@
+{
+  "version": "2.6",
+  "children": [
+    {
+      "type": "frame",
+      "id": "KrQeH",
+      "x": 254,
+      "y": -1867,
+      "name": "01 Intro",
+      "clip": true,
+      "width": 390,
+      "height": 900,
+      "fill": "#ffffffff",
+      "stroke": {
+        "align": "inside",
+        "thickness": 1
+      },
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "vVG75",
+          "x": -616,
+          "y": 0,
+          "name": "hunlyeon-gwa-seupocheu-leul-wihan-cheyuggwan-ui-jeonmang 1",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "",
+            "mode": "fill"
+          },
+          "width": 1350,
+          "height": 900,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "3ozVt",
+          "x": 0,
+          "y": 0,
+          "name": "Rectangle 752",
+          "rotation": -1.5902773407317584e-15,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": -180,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#00000000",
+                "position": 0
+              },
+              {
+                "color": "#000000ff",
+                "position": 1
+              }
+            ],
+            "center": {
+              "x": 0.49999999999999994
+            }
+          },
+          "width": 390,
+          "height": 900,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "text",
+          "id": "jn0T6",
+          "x": 48,
+          "y": 829,
+          "name": "내가 찾던 최적의 운동 시설",
+          "fill": "#ffffffff",
+          "content": "내가 찾던 최적의 운동 시설",
+          "lineHeight": 1.0909090909090908,
+          "textAlign": "center",
+          "fontFamily": "Pretendard",
+          "fontSize": 22,
+          "fontWeight": "700",
+          "letterSpacing": 4.4
+        },
+        {
+          "type": "rectangle",
+          "id": "VZzWK",
+          "x": 157,
+          "y": 411,
+          "name": "Asset 1@2x 1",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "",
+            "mode": "fill"
+          },
+          "width": 75,
+          "height": 78,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "pRJtn",
+          "x": 8,
+          "y": 8,
+          "name": "Rectangle 880",
+          "opacity": 0.20000000298023224,
+          "width": 374,
+          "height": 884,
+          "stroke": {
+            "align": "inside",
+            "thickness": 2,
+            "fill": "#ffffffff"
+          }
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "raCe5",
+      "x": 1059,
+      "y": -2566,
+      "name": "01 Intro",
+      "clip": true,
+      "width": 390,
+      "height": 4425,
+      "fill": "#5568f5ff",
+      "stroke": {
+        "align": "inside",
+        "thickness": 1
+      },
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "fAgia",
+          "x": -35,
+          "y": -32,
+          "name": "ChatGPT Image 2026년 1월 27일 오전 11_20_21 1",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "",
+            "mode": "fill"
+          },
+          "width": 696,
+          "height": 1044,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": [
+            50,
+            50,
+            0,
+            0
+          ],
+          "id": "OJgLc",
+          "x": 0,
+          "y": 3567,
+          "name": "Rectangle 1146",
+          "fill": "#282828ff",
+          "width": 390,
+          "height": 877,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "text",
+          "id": "iodZu",
+          "x": 30,
+          "y": 1214,
+          "name": "전화나 방문없이 운동시설에 방문하지 않아도 회원권 가격을 쉽게 비교 할 수 있고 또 할인된 가격에 신뢰하고 구입할 수 있는 운동시설 플렛폼입니다.",
+          "fill": "#ffffffff",
+          "content": "전화나 방문없이 운동시설에\n방문하지 않아도 회원권 가격을\n쉽게 비교 할 수 있고 또 할인된\n가격에 신뢰하고 구입할 수 있는\n운동시설 플렛폼입니다.\n",
+          "lineHeight": 1.3333333333333333,
+          "fontFamily": "Pretendard",
+          "fontSize": 24,
+          "fontWeight": "normal",
+          "letterSpacing": -0.72
+        },
+        {
+          "type": "ellipse",
+          "id": "8ZLuW",
+          "x": -80,
+          "y": 4213,
+          "name": "Ellipse 273",
+          "opacity": 0.5,
+          "sweepAngle": 360.00001001791264,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "opacity": 0.15000000596046448,
+            "rotation": -180,
+            "size": {
+              "height": 0.9999999999999999
+            },
+            "colors": [
+              {
+                "color": "#ffffffff",
+                "position": 0
+              },
+              {
+                "color": "#ffffff00",
+                "position": 0.36538460850715637
+              }
+            ],
+            "center": {
+              "y": 0.49999999999999994
+            }
+          },
+          "width": 549,
+          "height": 549,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#ffffffff"
+          }
+        },
+        {
+          "type": "text",
+          "id": "zMyh9",
+          "x": 30,
+          "y": 1144,
+          "name": "올짐 은?",
+          "fill": "#ffffffff",
+          "content": "올짐 은?",
+          "lineHeight": 0.8,
+          "fontFamily": "Pretendard",
+          "fontSize": 40,
+          "fontWeight": "600"
+        },
+        {
+          "type": "rectangle",
+          "id": "x6a8B",
+          "x": 110,
+          "y": 1499,
+          "name": "3d-cheyug-jangbi 1",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "",
+            "mode": "fill"
+          },
+          "width": 260,
+          "height": 455,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "text",
+          "id": "qD4a4",
+          "x": 24,
+          "y": 3296,
+          "name": "회원권 유효성 보장",
+          "fill": "#ffffffff",
+          "textGrowth": "fixed-width-height",
+          "width": 225,
+          "height": 35,
+          "content": "회원권 유효성 보장",
+          "lineHeight": 0.8,
+          "fontFamily": "Pretendard",
+          "fontSize": 30,
+          "fontWeight": "600"
+        },
+        {
+          "type": "text",
+          "id": "oJmAy",
+          "x": 24,
+          "y": 3340,
+          "name": "계약과 다르게 운동시설이 갑자기 폐업하거나 이용 제한을 할 경우, 올짐을 통해서 사후 처리를 받으실 수 있어서 안심하고 회원권을 구매하실 수 있습니다.",
+          "fill": "#ffffffff",
+          "textGrowth": "fixed-width-height",
+          "width": 333,
+          "height": 119,
+          "content": "계약과 다르게 운동시설이 갑자기 폐업하거나 이용 제한을 할 경우, 올짐을 통해서 사후 처리를 받으실 수 있어서 안심하고 회원권을 \n구매하실 수 있습니다.",
+          "lineHeight": 1.3333333333333333,
+          "fontFamily": "Pretendard",
+          "fontSize": 18,
+          "fontWeight": "normal",
+          "letterSpacing": -0.54
+        },
+        {
+          "type": "text",
+          "id": "Hpk3O",
+          "x": 24,
+          "y": 2541,
+          "name": "최대 할인율이 적용된 회원권",
+          "fill": "#ffffffff",
+          "textGrowth": "fixed-width-height",
+          "width": 342,
+          "height": 35,
+          "content": "최대 할인율이 적용된 회원권",
+          "lineHeight": 0.8,
+          "fontFamily": "Pretendard",
+          "fontSize": 30,
+          "fontWeight": "600"
+        },
+        {
+          "type": "text",
+          "id": "GLdbO",
+          "x": 24,
+          "y": 2012,
+          "name": "등록된 운동 시설 최다 보유",
+          "fill": "#ffffffff",
+          "textGrowth": "fixed-width-height",
+          "width": 321,
+          "height": 35,
+          "content": "등록된 운동 시설 최다 보유",
+          "lineHeight": 0.8,
+          "fontFamily": "Pretendard",
+          "fontSize": 30,
+          "fontWeight": "600"
+        },
+        {
+          "type": "text",
+          "id": "jBEIV",
+          "x": 24,
+          "y": 2054,
+          "name": "올짐은 국내 최초, 최다 운동 시설이 등록된 운동 시설 플랫폼입니다. 이젠 방문, 전화하지 마시고 손쉽게 여러 시설들을 중 마음에 드는 곳을 찾아보세요.",
+          "fill": "#ffffffff",
+          "textGrowth": "fixed-width-height",
+          "width": 339,
+          "height": 88,
+          "content": "올짐은 국내 최초, 최다  운동 시설이 등록된 \n운동 시설 플랫폼입니다. 이젠 방문, 전화하지 \n마시고 손쉽게 여러 시설들을 중 마음에 드는 \n곳을 찾아보세요.",
+          "lineHeight": 1.3333333333333333,
+          "fontFamily": "Pretendard",
+          "fontSize": 18,
+          "fontWeight": "normal",
+          "letterSpacing": -0.54
+        },
+        {
+          "type": "rectangle",
+          "id": "5Hce9",
+          "x": 24,
+          "y": 2824,
+          "name": "3d-gym-equipment 1",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "",
+            "mode": "fill"
+          },
+          "width": 258,
+          "height": 451,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "GOPPy",
+          "x": 26,
+          "y": 2258,
+          "name": "hunlyeon-gwa-seupocheu-leul-wihan-cheyuggwan-ui-jeonmang 4",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "",
+            "mode": "fill"
+          },
+          "width": 350,
+          "height": 233,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "text",
+          "id": "KjaET",
+          "x": 26,
+          "y": 3649,
+          "name": "ALL GYM POINT",
+          "fill": "#809cffff",
+          "content": "ALL GYM POINT",
+          "lineHeight": 0.7272727272727273,
+          "fontFamily": "Pretendard",
+          "fontSize": 44,
+          "fontWeight": "800"
+        },
+        {
+          "type": "text",
+          "id": "EnlPc",
+          "x": 26,
+          "y": 3714,
+          "name": "할인된 회원권을 올짐 포인트로 더 저렴하게 구입해 보세요",
+          "fill": "#809cffff",
+          "content": "할인된 회원권을 올짐 포인트로\n더 저렴하게 구입해 보세요",
+          "lineHeight": 1.2142857142857142,
+          "fontFamily": "Pretendard",
+          "fontSize": 28,
+          "fontWeight": "normal",
+          "letterSpacing": -0.56
+        },
+        {
+          "type": "group",
+          "id": "VFB23",
+          "x": 30,
+          "y": 4327,
+          "name": "Group 2146",
+          "children": [
+            {
+              "type": "text",
+              "id": "aLgoQ",
+              "x": 13,
+              "y": 0,
+              "name": "올짐에서 친구 초대, 출석 체크, 리뷰 쓰기 등을 통해 포인트를 적립하시면 할인된 회원권을 더 저렴하게 구입하실 수 있습니다.",
+              "fill": "#a9a9a9ff",
+              "content": "올짐에서 친구 초대, 출석 체크, 리뷰 쓰기 등을 통해\n포인트를 적립하시면 할인된 회원권을 더 저렴하게\n구입하실 수 있습니다.",
+              "lineHeight": 1.25,
+              "fontFamily": "Pretendard",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "JAEus",
+              "x": 0,
+              "y": 2,
+              "name": "*",
+              "fill": "#a9a9a9ff",
+              "content": "*",
+              "lineHeight": 1.25,
+              "fontFamily": "Pretendard",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "Yh1mi",
+          "x": 62,
+          "y": 4040,
+          "name": "출석 체크",
+          "fill": "#ffffffff",
+          "content": "출석 체크",
+          "lineHeight": 1.6,
+          "fontFamily": "Pretendard",
+          "fontSize": 20,
+          "fontWeight": "800"
+        },
+        {
+          "type": "text",
+          "id": "ShJ1O",
+          "x": 157,
+          "y": 3950,
+          "name": "친구 초대",
+          "fill": "#ffffffff",
+          "content": "친구 초대",
+          "lineHeight": 1.6,
+          "fontFamily": "Pretendard",
+          "fontSize": 20,
+          "fontWeight": "800"
+        },
+        {
+          "type": "text",
+          "id": "3wxi5",
+          "x": 24,
+          "y": 2578.09375,
+          "name": "올짐에서 구매한 회원권은 일반 회원권에 비해서 큰 할인이 적용됩니다. 또한 통합회원권을 구매하시면 여러 시설을 더 큰 폭의 할인된 가격으로 이용하실 수 있습니다.",
+          "fill": "#ffffffff",
+          "textGrowth": "fixed-width-height",
+          "width": 342,
+          "height": 119,
+          "content": "올짐에서 구매한 회원권은 일반 회원권에 비해서 큰 할인이 적용됩니다. 또한 통합회원권을 \n구매하시면 여러 시설을 더 큰 폭의 할인된 \n가격으로 이용하실 수 있습니다.",
+          "lineHeight": 1.3333333333333333,
+          "fontFamily": "Pretendard",
+          "fontSize": 18,
+          "fontWeight": "normal",
+          "letterSpacing": -0.54
+        },
+        {
+          "type": "text",
+          "id": "eyoGG",
+          "x": 251,
+          "y": 4040,
+          "name": "리뷰 쓰기",
+          "fill": "#ffffffff",
+          "content": "리뷰 쓰기",
+          "lineHeight": 1.6,
+          "fontFamily": "Pretendard",
+          "fontSize": 20,
+          "fontWeight": "800"
+        },
+        {
+          "type": "text",
+          "id": "J6uKy",
+          "x": 68,
+          "y": 4262,
+          "name": "포인트로 회원권 구매",
+          "fill": "#ffffffff",
+          "content": "포인트로 회원권 구매",
+          "lineHeight": 1.0666666666666667,
+          "fontFamily": "Pretendard",
+          "fontSize": 30,
+          "fontWeight": "600"
+        },
+        {
+          "type": "text",
+          "id": "rnIY7",
+          "x": 173,
+          "y": 4040,
+          "name": "+",
+          "fill": "#ffffffff",
+          "content": "+",
+          "lineHeight": 0.5,
+          "fontFamily": "Pretendard",
+          "fontSize": 64,
+          "fontWeight": "600"
+        },
+        {
+          "type": "rectangle",
+          "id": "bSVoO",
+          "x": 390,
+          "y": 774.0000610351562,
+          "name": "Rectangle 1149",
+          "rotation": -179.99999499104388,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": -180,
+            "size": {
+              "height": 0.9999999999999999
+            },
+            "colors": [
+              {
+                "color": "#00000000",
+                "position": 0
+              },
+              {
+                "color": "#000000e5",
+                "position": 1
+              }
+            ],
+            "center": {
+              "y": 0.49999999999999994
+            }
+          },
+          "width": 389.99993896484375,
+          "height": 774.0000610351562,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "ChL7n",
+          "x": 145,
+          "y": 3918,
+          "name": "Ellipse 270",
+          "opacity": 0.5,
+          "sweepAngle": 360.00001001791264,
+          "width": 96,
+          "height": 96,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#ffffffff"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "wAODi",
+          "x": 240,
+          "y": 4008,
+          "name": "Ellipse 274",
+          "opacity": 0.5,
+          "sweepAngle": 360.00001001791264,
+          "width": 96,
+          "height": 96,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#ffffffff"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "piphQ",
+          "x": 51,
+          "y": 4007,
+          "name": "Ellipse 275",
+          "opacity": 0.5,
+          "sweepAngle": 360.00001001791264,
+          "width": 96,
+          "height": 96,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#ffffffff"
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "o3cYY",
+          "x": 25,
+          "y": 1051,
+          "name": "Rectangle 1148",
+          "fill": "#809cffff",
+          "width": 345,
+          "height": 2,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "path",
+          "id": "rsRLe",
+          "x": -36,
+          "y": 378,
+          "name": "Vector 225",
+          "geometry": "M0 0l0 103 214.00412 0 49.99588-103-264 0z",
+          "fill": "#5568f5ff",
+          "width": 220,
+          "height": 129,
+          "stroke": {
+            "align": "center",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "path",
+          "id": "fqVTU",
+          "x": 467,
+          "y": 538,
+          "name": "Vector 226",
+          "flipX": true,
+          "geometry": "M0 0l0 144 267 0 96-144-363 0z",
+          "fill": "#5568f5ff",
+          "width": 389,
+          "height": 190,
+          "stroke": {
+            "align": "center",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "text",
+          "id": "ho3za",
+          "x": 91,
+          "y": 194,
+          "name": "한 곳에",
+          "fill": "#ffffffff",
+          "content": "한 곳에",
+          "lineHeight": 0.64,
+          "fontFamily": "Pretendard",
+          "fontSize": 50,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "DZe15",
+          "x": 238,
+          "y": 201,
+          "name": "다 모았다",
+          "fill": "#ffffffff",
+          "content": "다 모았다",
+          "lineHeight": 1.0666666666666667,
+          "fontFamily": "Pretendard",
+          "fontSize": 30,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "gPp52",
+          "x": 135,
+          "y": 137,
+          "name": "운동시설을",
+          "fill": "#ffffffff",
+          "content": "운동시설을",
+          "lineHeight": 1.0666666666666667,
+          "fontFamily": "Pretendard",
+          "fontSize": 30,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "Bvy8h",
+          "x": 40,
+          "y": 130,
+          "name": "모든",
+          "fill": "#ffffffff",
+          "content": "모든",
+          "lineHeight": 0.64,
+          "fontFamily": "Pretendard",
+          "fontSize": 50,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "O3yAN",
+          "x": 15,
+          "y": 387,
+          "name": "ALL",
+          "content": "ALL",
+          "lineHeight": 1.2,
+          "textAlign": "center",
+          "fontFamily": "Fugaz One",
+          "fontSize": 100,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "KksOF",
+          "x": 51,
+          "y": 563,
+          "name": "GYM",
+          "fill": "#ffffffff",
+          "content": "GYM",
+          "lineHeight": 1.0666666666666667,
+          "textAlign": "center",
+          "fontFamily": "Fugaz One",
+          "fontSize": 150,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "id": "DSEzs",
+          "x": 0,
+          "y": 761,
+          "name": "Rectangle 1144",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": -180,
+            "size": {
+              "height": 0.9999999999999999
+            },
+            "colors": [
+              {
+                "color": "#5568f500",
+                "position": 0
+              },
+              {
+                "color": "#5568f5ff",
+                "position": 1
+              }
+            ],
+            "center": {
+              "y": 0.49999999999999994
+            }
+          },
+          "width": 390,
+          "height": 252,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        }
+      ]
+    }
+  ]
+}

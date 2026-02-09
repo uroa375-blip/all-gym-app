@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-container {
+    width: 100%;
+    height: 100%;
+    /* Deep blue gradient based on the image */
+    background: linear-gradient(180deg, #1e2875 0%, #3448c5 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer; /* Indicates it's clickable */
+    overflow: hidden; /* Prevent scroll */
+}
+
+/* 로고 영역 */
+.logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px; /* Slight visual adjustment */
+}
+
+.logo-image {
+    width: 75px; /* Adjusted size */
+    height: 78px;
+}
+
+/* 하단 태그라인 */
+.tagline {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.tagline p {
+    font-size: 22px;
+    font-weight: 300;
+    color: #ffffff;
+    letter-spacing: 0.2em;
+    margin: 0;
+}
+
+/* Simulate the mobile size on desktop */
+@media (min-width: 391px) {
+    .intro-container {
+        width: 390px;
+        height: 844px;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    }
+}

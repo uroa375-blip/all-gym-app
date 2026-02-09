@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가격 비교 - ALL GYM</title>
+    <link rel="stylesheet" href="css/price.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <div class="price-container" style="display:flex; flex-direction:column; overflow:hidden;">
+        <div class="content-scroll-wrapper">
+
+        <!-- K-Ann Fitness -->
+        <div class="gym-entry">
+            <div class="gym-header">
+                <span class="gym-title">케이안 휘트니스</span>
+                <div class="gym-rating">
+                    <img src="img/pinkstar.png">
+                    <span>4.7(23)</span>
+                </div>
+            </div>
+            <div class="gym-photo">
+                <img src="img/price1.png">
+            </div>
+            <div class="update-date">2023.10.28 업데이트</div>
+            
+            <div class="price-grid">
+                <div class="price-card selected" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">1개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">100,000원</span>
+                        <span class="discount-badge">10%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">90,000원</span>
+                    </div>
+                </div>
+                <div class="price-card" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">3개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">250,000원</span>
+                        <span class="discount-badge">15%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">212,500원</span>
+                    </div>
+                </div>
+                <div class="price-card" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">6개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">400,000원</span>
+                        <span class="discount-badge">20%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">320,000원</span>
+                    </div>
+                </div>
+                <div class="price-card" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">12개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">650,000원</span>
+                        <span class="discount-badge">25%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">487,500원</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-banner">
+                <div class="info-label">무료 프로그램<br>무료 서비스</div>
+                <div class="info-content">GX, 시니어서 전용, 맞춤 운동관리,<br>운동복, 샤워실, 주차장</div>
+            </div>
+        </div>
+
+        <!-- Lead Gym -->
+        <div class="gym-entry">
+            <div class="gym-header">
+                <span class="gym-title">리드 짐</span>
+                <div class="gym-rating">
+                    <img src="img/pinkstar.png">
+                    <span>4.6(42)</span>
+                </div>
+            </div>
+            <div class="gym-photo">
+                <img src="img/price2.png">
+            </div>
+            <div class="update-date">2023.10.28 업데이트</div>
+            
+            <div class="price-grid">
+                <div class="price-card selected" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">1개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">100,000원</span>
+                        <span class="discount-badge">10%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">90,000원</span>
+                    </div>
+                </div>
+                <div class="price-card" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">3개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">250,000원</span>
+                        <span class="discount-badge">15%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">212,500원</span>
+                    </div>
+                </div>
+                <div class="price-card" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">6개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">400,000원</span>
+                        <span class="discount-badge">20%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">320,000원</span>
+                    </div>
+                </div>
+                <div class="price-card" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">12개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">650,000원</span>
+                        <span class="discount-badge">25%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">487,500원</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-banner">
+                <div class="info-label">무료 프로그램<br>무료 서비스</div>
+                <div class="info-content">GX, 시니어서 전용, 맞춤 운동관리,<br>운동복, 샤워실, 주차장</div>
+            </div>
+        </div>
+
+        <!-- Trader Gym (1) -->
+        <div class="gym-entry">
+            <div class="gym-header">
+                <span class="gym-title">트레이더 짐</span>
+                <div class="gym-rating">
+                    <img src="img/pinkstar.png">
+                    <span>4.6(42)</span>
+                </div>
+            </div>
+            <div class="gym-photo">
+                <img src="img/price3.png">
+            </div>
+            <div class="update-date">2023.10.28 업데이트</div>
+            
+            <div class="price-grid">
+                <div class="price-card selected" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">1개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">100,000원</span>
+                        <span class="discount-badge">10%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">90,000원</span>
+                    </div>
+                </div>
+                <div class="price-card" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">3개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">250,000원</span>
+                        <span class="discount-badge">15%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">212,500원</span>
+                    </div>
+                </div>
+                <div class="price-card" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">6개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">400,000원</span>
+                        <span class="discount-badge">20%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">320,000원</span>
+                    </div>
+                </div>
+                <div class="price-card" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">12개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">650,000원</span>
+                        <span class="discount-badge">25%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">487,500원</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-banner">
+                <div class="info-label">무료 프로그램<br>무료 서비스</div>
+                <div class="info-content">GX, 시니어서 전용, 맞춤 운동관리,<br>운동복, 샤워실, 주차장</div>
+            </div>
+        </div>
+
+        <!-- Trader Gym (2) -->
+        <div class="gym-entry">
+            <div class="gym-header">
+                <span class="gym-title">트레이더 짐</span>
+                <div class="gym-rating">
+                    <img src="img/pinkstar.png">
+                    <span>4.6(42)</span>
+                </div>
+            </div>
+            <div class="gym-photo">
+                <img src="img/price4.png">
+            </div>
+            <div class="update-date">2023.10.28 업데이트</div>
+            
+            <div class="price-grid">
+                <div class="price-card selected" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">1개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">100,000원</span>
+                        <span class="discount-badge">10%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">90,000원</span>
+                    </div>
+                </div>
+                <div class="price-card" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">3개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">250,000원</span>
+                        <span class="discount-badge">15%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">212,500원</span>
+                    </div>
+                </div>
+                <div class="price-card" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">6개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">400,000원</span>
+                        <span class="discount-badge">20%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">320,000원</span>
+                    </div>
+                </div>
+                <div class="price-card" onclick="toggleSelect(this)">
+                    <div class="card-top">
+                        <span class="duration">12개월</span>
+                        <img src="img/cart.png" class="cart-btn" onclick="goToCart(event)">
+                    </div>
+                    <div class="card-mid">
+                        <span class="original-price">650,000원</span>
+                        <span class="discount-badge">25%</span>
+                    </div>
+                    <div class="card-bot">
+                        <span class="final-price">487,500원</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-banner">
+                <div class="info-label">무료 프로그램<br>무료 서비스</div>
+                <div class="info-content">GX, 시니어서 전용, 맞춤 운동관리,<br>운동복, 샤워실, 주차장</div>
+            </div>
+        </div>
+
+        <!-- Bottom Report Banner -->
+        <div class="report-banner" onclick="goToReport()">
+            <img src="img/character.png" class="char-img">
+            <div class="report-text">
+                <div class="report-main">정보가 달라요 !</div>
+                <div class="report-sub">현장과 다른 정보가 있나요? 제보해주세요!</div>
+            </div>
+        </div>
+
+    </div>
+    
+    <nav class="global-footer">
+        <a href="menu.html" class="footer-item active">
+            <span class="material-symbols-outlined">home</span>
+        </a>
+        <a href="map.html" class="footer-item">
+            <span class="material-symbols-outlined">location_on</span>
+        </a>
+        <a href="favorite.html" class="footer-item">
+            <span class="material-symbols-outlined">favorite</span>
+        </a>
+        <a href="setting.html" class="footer-item">
+            <span class="material-symbols-outlined">person</span>
+        </a>
+    </nav>
+    </div>
+
+    <script>
+        function toggleSelect(card) {
+            const grid = card.closest('.price-grid');
+            grid.querySelectorAll('.price-card').forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+        }
+
+        function goToCart(event) {
+            event.stopPropagation();
+            window.location.href = 'cart.html';
+        }
+
+        function goToReport() {
+            window.location.href = 'report.html';
+        }
+    </script>
+</body>
+
+</html>

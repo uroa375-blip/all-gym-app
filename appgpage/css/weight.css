@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weight-container {
+    width: 390px;
+    height: 844px; /* Fixed height */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 30px 40px;
+    background-color: #2C2C2C;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.top-content {
+    margin-bottom: 60px;
+    text-align: center; /* Image shows centered or left? Image text is left aligned mostly but 54kg is center. Let's keep common style left aligned title */
+    text-align: left;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.page-desc {
+    font-size: 14px;
+    color: #aaaaaa;
+    line-height: 1.5;
+}
+
+.weight-display {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.weight-value {
+    font-size: 60px;
+    font-weight: 700;
+    color: #5865F2; /* Blue color */
+    margin-right: 5px;
+}
+
+.weight-unit {
+    font-size: 24px;
+    color: #5865F2;
+    font-weight: 500;
+}
+
+/* Ruler Wrapper */
+.ruler-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-bottom: auto;
+    /* Mask for fade effect on sides if needed, but horizontal fade is good */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+}
+
+.ruler-scroller {
+    display: flex;
+    overflow-x: auto;
+    height: 100%;
+    align-items: center; /* Align ticks vertically center */
+    scrollbar-width: none;
+    padding: 0 50%; /* Center the first/last item */
+    scroll-snap-type: x mandatory;
+}
+
+.ruler-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.tick-wrapper {
+    flex-shrink: 0;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align lines to bottom or center? Image shows lines. */
+    scroll-snap-align: center;
+}
+
+.tick {
+    width: 2px;
+    background-color: #666;
+    border-radius: 2px;
+}
+
+.tick.short {
+    height: 30px;
+}
+
+.tick.long {
+    height: 60px;
+    background-color: #888;
+}
+
+.center-line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 90px;
+    background-color: #5865F2;
+    z-index: 10;
+    border-radius: 2px;
+}
+
+
+.bottom-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.btn {
+    height: 56px;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+}
+
+.btn:active {
+    opacity: 0.8;
+}
+
+.btn-prev {
+    flex: 1;
+    background-color: #444;
+    color: #ffffff;
+}
+
+.btn-next {
+    flex: 1;
+    background-color: #5865F2;
+    color: #ffffff;
+}
+
+@media (max-width: 390px) {
+    .weight-container {
+        width: 100%;
+        height: 100vh; /* Fallback for actual mobile override if needed, but 844px is fixed */
+    }
+}

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL GYM - 트레이너 프로필</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .detail-container {
+            width: 390px;
+            height: 844px;
+            background: #fff;
+            overflow-y: auto;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Header Section */
+        .header-section {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .heart-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 35px;
+            height: 35px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .heart-icon img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .profile-circle {
+            position: absolute;
+            bottom: -40px;
+            left: 20px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .profile-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Basic Info */
+        .basic-info {
+            padding: 0 20px 20px;
+        }
+
+        .t-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 5px;
+        }
+
+        .t-gym {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 3px;
+        }
+
+        .t-loc {
+            font-size: 13px;
+            color: #999;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            padding: 0 20px 30px;
+        }
+
+        .intro-bubble {
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 20px;
+            font-size: 13px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        /* Section Common */
+        .section {
+            padding: 30px 20px;
+            border-top: 8px solid #f5f5f5;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        /* Rating Section */
+        .rating-content {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .chart-box {
+            flex-shrink: 0;
+        }
+
+        .chart-box img {
+            width: 140px;
+            height: 140px;
+            object-fit: contain;
+        }
+
+        .rating-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .star-score {
+            font-size: 16px;
+            font-weight: 700;
+            color: #5865F2;
+        }
+
+        .rating-desc {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .btn-consult {
+            width: 100%;
+            height: 40px;
+            background: #5865F2;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        /* Info List */
+        .info-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .info-list li {
+            font-size: 14px;
+            color: #333;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .info-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #999;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            padding: 20px;
+            border-top: 8px solid #f5f5f5;
+        }
+
+        .social-item {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .social-item img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .social-item span {
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Membership List */
+        .membership-list {
+            padding: 30px 20px 40px;
+            border-top: 8px solid #f5f5f5;
+        }
+
+        .membership-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .membership-item:last-child {
+            border-bottom: none;
+        }
+
+        .m-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .m-count {
+            font-size: 16px;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .m-original {
+            font-size: 13px;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .m-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge-event {
+            background: #ff4757;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 10px;
+        }
+
+        .m-discount {
+            font-size: 14px;
+            font-weight: 700;
+            color: #5865F2;
+        }
+
+        .m-price {
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+        }
+
+        .cart-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        /* Scrollbar */
+        .detail-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .detail-container::-webkit-scrollbar-track {
+            background: #f5f5f5;
+        }
+
+        .detail-container::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 3px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <div class="detail-container" style="display:flex; flex-direction:column; overflow:hidden;">
+        <div class="content-scroll-wrapper">
+        
+        <!-- Header Image & Profile -->
+        <div class="header-section">
+            <div class="banner-img">
+                <img src="img/pic1.png" alt="헬스장">
+                <div class="heart-icon"><img src="img/heart.png" alt="좋아요"></div>
+            </div>
+            <div class="profile-circle">
+                <img src="img/profile1.png" alt="트레이너 프로필">
+            </div>
+        </div>
+
+        <!-- Basic Info -->
+        <div class="basic-info">
+            <h1 class="t-name">조정훈 선생님</h1>
+            <p class="t-gym">트레이더 짐</p>
+            <p class="t-loc">서울 관악구 난곡로 192-38</p>
+        </div>
+
+        <!-- Intro Bubble -->
+        <div class="intro-section">
+            <div class="intro-bubble">
+                안녕하세요! 근력 강화, 체력 증진 전문<br>
+                조정훈 트레이너 입니다.<br><br>
+                10년 경력의 지도 경력과 그 동안 쌓인 여러 회원님들의<br>
+                데이터와 개인적인 연구만으로도 짧은 기간 안에<br>
+                만족하실 결과를 만들어 드립니다!!<br><br>
+                회원님들의 성원에 힘입어 올짐 3년속 1순위 트레이너로<br>
+                선정되어 영광스럽게 생각합니다.<br><br>
+                안주하지 않고 계속 정진하는 트레이너가 될것을<br>
+                약속드리며 1:1 개인 상담을 통해 PT를 예약하시는<br>
+                분들께는 무료 인바디 분석 및 개인 맞춤 식단 플랜과<br>
+                단백질 드링크 1일 분을 제공해드립니다 ~^^
+            </div>
+        </div>
+
+        <!-- Rating & Chart -->
+        <section class="section rating-section">
+            <h2 class="section-title">평점</h2>
+            <div class="rating-content">
+                <div class="chart-box">
+                    <img src="img/graph.png" alt="평점 차트">
+                </div>
+                <div class="rating-info">
+                    <div class="star-score">★ 4.8(65)</div>
+                    <p class="rating-desc">친절하고 꼼꼼하게<br>지도를 잘해주셔서<br>처음하는 운동인데<br>너무 좋았어요</p>
+                    <button class="btn-consult">1:1 상담</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Qualifications -->
+        <section class="section qual-section">
+            <h2 class="section-title">자격/입상</h2>
+            <ul class="info-list">
+                <li>생활체육지도자 3급 (2010)</li>
+                <li>생활스포츠지도사 2급 보디빌딩</li>
+                <li>스포츠 마사지 1급</li>
+                <li>2022 Icn서울 보디빌딩 3위</li>
+                <li>2023 Npca 안양 보디빌딩 2위</li>
+                <li>2024 Whgp 구리 보디빌딩 3위</li>
+            </ul>
+        </section>
+
+        <!-- Education -->
+        <section class="section edu-section">
+            <h2 class="section-title">학력/경력</h2>
+            <ul class="info-list">
+                <li>중앙대학교 체육대학 졸업</li>
+                <li>전 스피드업 헬스클럽 트레이너</li>
+                <li>전 아이캔 휘트니스 트레이너</li>
+                <li>전 아마존 짐 트레이너</li>
+                <li>현 트레이더 짐 트레이너</li>
+            </ul>
+        </section>
+
+        <!-- Social Media -->
+        <div class="social-links">
+            <div class="social-item">
+                <img src="img/insta.png" alt="인스타그램">
+                <span>인스타그램</span>
+            </div>
+            <div class="social-item">
+                <img src="img/youtube.png" alt="유튜브">
+                <span>youtube</span>
+            </div>
+        </div>
+
+        <!-- Membership List -->
+        <div class="membership-list">
+            <h2 class="section-title">회원권</h2>
+            
+            <!-- Item 1 -->
+            <div class="membership-item">
+                <div class="m-left">
+                    <span class="m-count">1회</span>
+                    <span class="m-original">70,000원</span>
+                </div>
+                <div class="m-right">
+                    <span class="m-discount">15%</span>
+                    <span class="m-price">55,000원</span>
+                    <img src="img/cart.png" alt="장바구니" class="cart-icon" onclick="window.location.href='cart.html'">
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="membership-item">
+                <div class="m-left">
+                    <span class="m-count">5회</span>
+                    <span class="m-original">180,000원</span>
+                </div>
+                <div class="m-right">
+                    <span class="badge-event">EVENT</span>
+                    <span class="m-discount">17%</span>
+                    <span class="m-price">150,000원</span>
+                    <img src="img/cart.png" alt="장바구니" class="cart-icon" onclick="window.location.href='cart.html'">
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="membership-item">
+                <div class="m-left">
+                    <span class="m-count">10회</span>
+                    <span class="m-original">340,000원</span>
+                </div>
+                <div class="m-right">
+                    <span class="m-discount">19%</span>
+                    <span class="m-price">280,000원</span>
+                    <img src="img/cart.png" alt="장바구니" class="cart-icon" onclick="window.location.href='cart.html'">
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="membership-item">
+                <div class="m-left">
+                    <span class="m-count">20회</span>
+                    <span class="m-original">700,000원</span>
+                </div>
+                <div class="m-right">
+                    <span class="m-discount">23%</span>
+                    <span class="m-price">500,000원</span>
+                    <img src="img/cart.png" alt="장바구니" class="cart-icon" onclick="window.location.href='cart.html'">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <nav class="global-footer">
+        <a href="menu.html" class="footer-item active">
+            <span class="material-symbols-outlined">home</span>
+        </a>
+        <a href="map.html" class="footer-item">
+            <span class="material-symbols-outlined">location_on</span>
+        </a>
+        <a href="favorite.html" class="footer-item">
+            <span class="material-symbols-outlined">favorite</span>
+        </a>
+        <a href="setting.html" class="footer-item">
+            <span class="material-symbols-outlined">person</span>
+        </a>
+    </nav>
+    </div>
+</body>
+
+</html>
