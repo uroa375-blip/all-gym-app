@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Report.css';
+import '../styles/Report.css';
 
 const Report = () => {
     const [activeTab, setActiveTab] = useState('normal');

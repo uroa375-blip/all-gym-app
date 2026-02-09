@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Profile.css';
+import '../styles/Profile.css';
 
 const Profile = () => {
     const navigate = useNavigate();
@@ -16,11 +16,11 @@ const Profile = () => {
         <div className="profile-page-container">
             <div className="header-section">
                 <div className="banner-img">
-                    <img src="/img/pic1.png" alt="헬스장" />
-                    <div className="heart-icon"><img src="/img/heart.png" alt="좋아요" /></div>
+                    <img src="/assets/pic1.png" alt="헬스장" />
+                    <div className="heart-icon"><img src="/assets/heart.png" alt="좋아요" /></div>
                 </div>
                 <div className="profile-circle">
-                    <img src="/img/profile1.png" alt="트레이너 프로필" />
+                    <img src="/assets/profile1.png" alt="트레이너 프로필" />
                 </div>
             </div>
 
@@ -50,7 +50,7 @@ const Profile = () => {
                 <h2 className="section-title">평점</h2>
                 <div className="rating-content">
                     <div className="chart-box">
-                        <img src="/img/graph.png" alt="평점 차트" />
+                        <img src="/assets/graph.png" alt="평점 차트" />
                     </div>
                     <div className="rating-info">
                         <div className="star-score">★ 4.8(65)</div>
@@ -85,11 +85,11 @@ const Profile = () => {
 
             <div className="social-links">
                 <div className="social-item">
-                    <img src="/img/insta.png" alt="인스타그램" />
+                    <img src="/assets/insta.png" alt="인스타그램" />
                     <span>인스타그램</span>
                 </div>
                 <div className="social-item">
-                    <img src="/img/youtube.png" alt="유튜브" />
+                    <img src="/assets/youtube.png" alt="유튜브" />
                     <span>youtube</span>
                 </div>
             </div>
@@ -107,7 +107,7 @@ const Profile = () => {
                             <span className="m-discount">{m.discount}</span>
                             <span className="m-price">{m.price}</span>
                             <img 
-                                src="/img/cart.png" 
+                                src="/assets/cart.png" 
                                 alt="장바구니" 
                                 className="cart-icon" 
                                 onClick={() => navigate('/cart')} 

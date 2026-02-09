@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Favorite.css';
+import '../styles/Favorite.css';
 
 const FavoriteItem = ({ img, label, style }) => {
     const [selected, setSelected] = useState(false);
@@ -11,7 +11,7 @@ const FavoriteItem = ({ img, label, style }) => {
             onClick={() => setSelected(!selected)}
         >
             <div className="icon-box">
-                <img src={`/img/${img}`} alt={label} className="icon-img" />
+                <img src={`/assets/${img}`} alt={label} className="icon-img" />
             </div>
             <span className="item-label">{label}</span>
         </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Address.css';
+import '../styles/Address.css';
 
 const Address = () => {
     const navigate = useNavigate();
@@ -39,7 +39,7 @@ const Address = () => {
             <div id="map" ref={mapRef} className="map-wrapper"></div>
             
             <div ref={placeholderRef} className="map-placeholder" style={{ display: 'none' }}>
-                <img src="/img/map2.png" alt="Map Placeholder" className="placeholder-img" />
+                <img src="/assets/map2.png" alt="Map Placeholder" className="placeholder-img" />
             </div>
 
             <div className="bottom-actions">

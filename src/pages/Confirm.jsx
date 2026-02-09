@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Confirm.css';
+import '../styles/Confirm.css';
 
 const Confirm = () => {
     const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Price.css';
+import '../styles/Price.css';
 
 const PriceCard = ({ data, isSelected, onSelect, onCartClick }) => {
     return (
@@ -8,7 +8,7 @@ const PriceCard = ({ data, isSelected, onSelect, onCartClick }) => {
             <div className="card-top">
                 <span className="duration">{data.duration}</span>
                 <img 
-                    src="/img/cart.png" 
+                    src="/assets/cart.png" 
                     className="cart-btn" 
                     alt="cart"
                     onClick={(e) => {
@@ -36,12 +36,12 @@ const GymEntry = ({ gym, onCartClick }) => {
             <div className="gym-header">
                 <span className="gym-title">{gym.title}</span>
                 <div className="gym-rating">
-                    <img src="/img/pinkstar.png" alt="star" />
+                    <img src="/assets/pinkstar.png" alt="star" />
                     <span>{gym.rating}({gym.reviews})</span>
                 </div>
             </div>
             <div className="gym-photo">
-                <img src={`/img/${gym.img}`} alt={gym.title} />
+                <img src={`/assets/${gym.img}`} alt={gym.title} />
             </div>
             <div className="update-date">{gym.updateDate} 업데이트</div>
             
@@ -134,7 +134,7 @@ const Price = () => {
             ))}
 
             <div className="report-banner" onClick={() => navigate('/report')}>
-                <img src="/img/character.png" alt="character" className="char-img" />
+                <img src="/assets/character.png" alt="character" className="char-img" />
                 <div className="report-text">
                     <div className="report-main">정보가 달라요 !</div>
                     <div className="report-sub">현장과 다른 정보가 있나요? 제보해주세요!</div>

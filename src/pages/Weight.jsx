@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Weight.css';
+import '../styles/Weight.css';
 
 const Weight = () => {
     const navigate = useNavigate();

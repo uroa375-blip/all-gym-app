@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './PT.css';
+import '../styles/PT.css';
 
 const PT = () => {
     const navigate = useNavigate();
@@ -90,7 +90,7 @@ const PT = () => {
                 {trainers.map((t, idx) => (
                     <div className="trainer-item" key={idx}>
                         <div className="trainer-img-box">
-                            <img src={`/img/${t.img}`} alt={t.name} className="trainer-img" />
+                            <img src={`/assets/${t.img}`} alt={t.name} className="trainer-img" />
                         </div>
                         <div className="trainer-info">
                             <div className="info-top">
@@ -100,7 +100,7 @@ const PT = () => {
                                     <p className="t-loc">{t.loc}</p>
                                 </div>
                                 <div className="t-rating">
-                                    <img src="/img/pinkstar.png" alt="star" className="star-icon" />
+                                    <img src="/assets/pinkstar.png" alt="star" className="star-icon" />
                                     {t.rating}({t.review})
                                 </div>
                             </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Place.css';
+import '../styles/Place.css';
 
 const PlaceCard = ({ data, onCartClick, onImageClick }) => {
     const [reviewCount, setReviewCount] = useState(data.reviews || 0);
@@ -15,14 +15,14 @@ const PlaceCard = ({ data, onCartClick, onImageClick }) => {
             <div className="card-image-wrap" onClick={onImageClick}>
                 {data.rank && <div className="rank-badge">{data.rank}</div>}
                 {data.new && <div className="tag new-badge">new</div>}
-                <img src={`/img/${data.img}`} alt={data.title} onError={(e) => e.target.src = '/img/gym.png'} />
+                <img src={`/assets/${data.img}`} alt={data.title} onError={(e) => e.target.src = '/assets/gym.png'} />
             </div>
             <div className="card-info">
                 <div className="card-header">
                     <span className="card-title">{data.title}</span>
                     {data.rating && (
                         <div className="card-rating" onClick={handleRatingClick}>
-                            <img src="/img/pinkstar.png" alt="star" className="pinkstar-icon" />
+                            <img src="/assets/pinkstar.png" alt="star" className="pinkstar-icon" />
                             <span>{data.rating}(<span className="review-count">{reviewCount}</span>)</span>
                         </div>
                     )}
@@ -38,7 +38,7 @@ const PlaceCard = ({ data, onCartClick, onImageClick }) => {
                     <div className="card-actions">
                         {data.event ? <span className="tag event">event</span> : <span />}
                         <div className="cart-icon" onClick={onCartClick}>
-                            <img src="/img/cart.png" alt="cart" className="cart-icon-img" />
+                            <img src="/assets/cart.png" alt="cart" className="cart-icon-img" />
                         </div>
                     </div>
                 )}

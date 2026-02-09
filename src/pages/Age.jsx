@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Age.css';
+import '../styles/Age.css';
 
 const Age = () => {
     const navigate = useNavigate();

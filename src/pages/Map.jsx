@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './Map.css';
+import '../styles/Map.css';
 
 const Map = () => {
     const mapRef = useRef(null);

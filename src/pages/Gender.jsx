@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Gender.css';
+import '../styles/Gender.css';
 
 const Gender = () => {
     const navigate = useNavigate();

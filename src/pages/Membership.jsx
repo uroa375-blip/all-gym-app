@@ -1,5 +1,5 @@
 import React from 'react';
-import './Membership.css';
+import '../styles/Membership.css';
 
 const Membership = () => {
     const faqs = [
@@ -27,11 +27,11 @@ const Membership = () => {
                 <p className="hero-subtitle">여러 가지 운동을 하나의 회원권으로<br />최대 할인을 받고 즐길 수 있는 방법</p>
                 <h1 className="hero-title">올짐 통합회원권</h1>
                 <div className="collage-container">
-                    <img src="/img/membership1.png" alt="헬스장" className="collage-img img-top-left" />
-                    <img src="/img/membership2.png" alt="헬스장" className="collage-img img-tall" />
-                    <img src="/img/membership3.png" alt="헬스장" className="collage-img img-bot-left" />
-                    <img src="/img/membership4.png" alt="헬스장" className="collage-img img-big" />
-                    <img src="/img/membership5.png" alt="헬스장" className="collage-img img-bot-right" />
+                    <img src="/assets/membership1.png" alt="헬스장" className="collage-img img-top-left" />
+                    <img src="/assets/membership2.png" alt="헬스장" className="collage-img img-tall" />
+                    <img src="/assets/membership3.png" alt="헬스장" className="collage-img img-bot-left" />
+                    <img src="/assets/membership4.png" alt="헬스장" className="collage-img img-big" />
+                    <img src="/assets/membership5.png" alt="헬스장" className="collage-img img-bot-right" />
                 </div>
             </section>
 
@@ -41,23 +41,23 @@ const Membership = () => {
                 <div className="info-card-list">
                     <div className="info-card">
                         <div className="info-item">
-                            <img src="/img/home.png" alt="집" />
+                            <img src="/assets/home.png" alt="집" />
                             <span>집 근처</span>
                         </div>
                         <div className="plus-circle">+</div>
                         <div className="info-item">
-                            <img src="/img/company.png" alt="회사" />
+                            <img src="/assets/company.png" alt="회사" />
                             <span>회사 근처</span>
                         </div>
                     </div>
                     <div className="info-card">
                         <div className="info-item">
-                            <img src="/img/health.png" alt="헬스" />
+                            <img src="/assets/health.png" alt="헬스" />
                             <span>헬스</span>
                         </div>
                         <div className="plus-circle">+</div>
                         <div className="info-item">
-                            <img src="/img/pilates.png" alt="필라테스" />
+                            <img src="/assets/pilates.png" alt="필라테스" />
                             <span>필라테스</span>
                         </div>
                     </div>

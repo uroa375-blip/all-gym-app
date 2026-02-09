@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Thumbnail.css';
+import '../styles/Thumbnail.css';
 
 const Thumbnail = () => {
     const [activeFilter, setActiveFilter] = useState('헬스');
@@ -18,14 +18,14 @@ const Thumbnail = () => {
     return (
         <div className="thumbnail-page-container">
             <div className="header">
-                <img src="/img/grid-icon.png" alt="그리드" className="grid-icon" />
-                <img src="/img/menu-icon.png" alt="메뉴" className="menu-icon" />
+                <img src="/assets/plus.png" alt="그리드" className="grid-icon" /> // Placeholder for grid-icon
+                <img src="/assets/list.png" alt="메뉴" className="menu-icon" /> // Placeholder for menu-icon
             </div>
 
             <div className="gallery-grid">
                 {thumbs.map((thumb, idx) => (
                     <div className="gallery-item" key={idx}>
-                        <img src={`/img/${thumb}`} alt="헬스장" />
+                        <img src={`/assets/${thumb}`} alt="헬스장" />
                     </div>
                 ))}
             </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Cart.css';
+import '../styles/Cart.css';
 
 const Cart = () => {
     const navigate = useNavigate();
@@ -46,7 +46,7 @@ const Cart = () => {
                 </div>
 
                 <div className="gym-image-container">
-                    <img src="/img/membership1.png" alt="헬스장 이미지" className="gym-image" />
+                    <img src="/assets/membership1.png" alt="헬스장 이미지" className="gym-image" />
                 </div>
 
                 <div className="price-card">

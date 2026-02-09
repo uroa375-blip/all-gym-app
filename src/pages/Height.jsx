@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Height.css';
+import '../styles/Height.css';
 
 const Height = () => {
     const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Intro.css';
-import logoImg from '../assets/logo.svg';
+const logoImg = '/assets/shape1.png'; // Using a known existing asset as a placeholder for logo
 
 const Intro = () => {
     const navigate = useNavigate();

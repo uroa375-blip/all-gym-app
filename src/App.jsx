@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MobileLayout from './layouts/MobileLayout';
 import Intro from './pages/Intro';
 import Onboarding from './pages/Onboarding';
-import Concept from './pages/Concept';
 import Menu from './pages/Menu';
 import PT from './pages/PT';
 import Profile from './pages/Profile';
@@ -30,7 +29,6 @@ function App() {
         <Route element={<MobileLayout />}>
           <Route path="/" element={<Intro />} />
           <Route path="/onboarding" element={<Onboarding />} />
-          <Route path="/concept" element={<Concept />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/pt" element={<PT />} />
           <Route path="/profile" element={<Profile />} />

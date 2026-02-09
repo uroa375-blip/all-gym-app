@@ -1,10 +1,10 @@
 import React from 'react';
 import '../styles/Onboarding.css';
-import allImg from '../assets/all.png';
-import gymImg from '../assets/gym.png';
-import pic1 from '../assets/pic1.png';
-import pic2 from '../assets/pic2.png';
-import pic3 from '../assets/pic3.png';
+const allImg = '/assets/shape1.png';
+const gymImg = '/assets/shape2.png';
+const pic1 = '/assets/pic1.png';
+const pic2 = '/assets/pic2.png';
+const pic3 = '/assets/pic3.png';
 
 const Onboarding = () => {
     return (
