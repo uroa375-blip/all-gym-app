@@ -1,25 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.intro-body {
-  font-family:
-    "Pretendard",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .intro-container {
   width: 100%;
   height: 100%;
@@ -30,26 +8,26 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  cursor: pointer; /* Indicates it's clickable */
-  overflow: hidden; /* Prevent scroll */
+  cursor: pointer;
+  overflow: hidden;
 }
 
 /* 로고 영역 */
-.logo-wrapper {
+.intro-container .logo-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px; /* Slight visual adjustment */
+  margin-bottom: 50px;
 }
 
-.logo-image {
-  width: 75px; /* Adjusted size */
+.intro-container .logo-image {
+  width: 75px;
   height: 78px;
 }
 
 /* 하단 태그라인 */
-.tagline {
+.intro-container .tagline {
   position: absolute;
   bottom: 80px;
   left: 0;
@@ -58,19 +36,10 @@
   width: 100%;
 }
 
-.tagline p {
+.intro-container .tagline p {
   font-size: 22px;
   font-weight: 300;
   color: #ffffff;
   letter-spacing: 0.2em;
   margin: 0;
-}
-
-/* Simulate the mobile size on desktop */
-@media (min-width: 391px) {
-  .intro-container {
-    width: 390px;
-    height: 844px;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-  }
 }

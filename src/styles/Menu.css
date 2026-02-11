@@ -1,4 +1,4 @@
-.menu-page-container {
+.menu-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -8,14 +8,14 @@
     background-color: #2C2C2C;
 }
 
-.menu-list {
+.menu-container .menu-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
 }
 
-.menu-btn {
+.menu-container .menu-btn {
     width: 100%;
     height: 120px;
     background-color: #5865F2;
@@ -29,7 +29,7 @@
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-.menu-btn:active {
+.menu-container .menu-btn:active {
     transform: scale(0.98);
     opacity: 0.9;
 }

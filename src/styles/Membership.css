@@ -1,18 +1,32 @@
-.membership-page-container {
+.membership-container {
     width: 100%;
     background: linear-gradient(180deg, #1a1a1a 0%, #2a2a2a 100%);
     display: flex;
     flex-direction: column;
+    font-family: 'Pretendard', sans-serif;
 }
 
-.hero-section {
+.membership-container .hero-section {
     padding: 80px 20px 40px;
     text-align: center;
     position: relative;
     overflow: hidden;
 }
 
-.hero-section::before {
+.membership-container .hero-effect-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.membership-container .hero-section::before {
     content: '';
     position: absolute;
     top: -100px;
@@ -25,82 +39,73 @@
     pointer-events: none;
 }
 
-.hero-subtitle {
-    font-size: 18px;
+.membership-container .hero-subtitle {
+    font-size: 20px;
     color: #ffffff;
     line-height: 1.5;
     margin-bottom: 15px;
-    font-weight: 400;
+    font-weight: 200;
     position: relative;
     z-index: 1;
 }
 
-.hero-title {
+.membership-container .hero-title {
     font-size: 44px;
-    font-weight: 800;
+    font-weight: 600;
     color: #fff;
     margin-bottom: 40px;
-    letter-spacing: -1.5px;
+    letter-spacing: 0.5px;
     position: relative;
     z-index: 1;
 }
 
-.collage-container {
-    position: relative;
+.membership-container .collage-container {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
     width: 100%;
-    height: 520px;
     margin-top: 20px;
+    padding: 0 10px;
+    transform: translateX(20px);
 }
 
-.collage-img {
-    position: absolute;
+.membership-container .collage-column {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.membership-container .collage-column.left {
+    padding-top: 100px; /* Stagger the left column down */
+}
+
+.membership-container .collage-img {
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 5px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     border: 1px solid rgba(255,255,255,0.1);
 }
 
-.img-tall {
-    width: 130px;
-    height: 200px;
-    top: 0;
-    right: 15px;
-    z-index: 2;
+/* Adjust widths and heights based on image content */
+/* Widths will fit the largest square in each column */
+.membership-container .collage-column.left {
+    width: auto;
+    align-items: flex-end; /* Align to the center gap */
 }
 
-.img-top-left {
-    width: 110px;
-    height: 110px;
-    top: 100px;
-    left: 35px;
-    z-index: 3;
+.membership-container .collage-column.right {
+    width: auto;
+    align-items: flex-start; /* Align to the center gap */
 }
 
-.img-bot-left {
-    width: 145px;
-    height: 145px;
-    top: 220px;
-    left: -5px;
-    z-index: 1;
-}
+.membership-container .img-1 { width: 100px; height: 100px; } /* Kettlebell square */
+.membership-container .img-3 { width: 136px; height: 136px; } /* Pilates square */
 
-.img-big {
-    width: 200px;
-    height: 200px;
-    top: 215px;
-    right: -20px;
-    z-index: 4;
-}
+.membership-container .img-2 { width: 118px; height: 118px; } /* Equipment square */
+.membership-container .img-4 { width: 175px; height: 175px; } /* Treadmill square */
+.membership-container .img-5 { width: 141px; height: 141px; } /* Cycle square */
 
-.img-bot-right {
-    width: 150px;
-    height: 150px;
-    top: 425px;
-    right: -20px;
-    z-index: 1;
-}
-
-.info-section {
+.membership-container .info-section {
     padding: 40px 20px;
     text-align: center;
     display: flex;
@@ -108,22 +113,22 @@
     align-items: center;
 }
 
-.section-heading {
-    font-size: 32px;
-    font-weight: 700;
-    color: #7B8CFF;
+.membership-container .section-heading {
+    font-size: 30px;
+    font-weight: 600;
+    color: #97A3FF;
     margin-bottom: 25px;
 }
 
-.section-desc {
-    font-size: 16px;
+.membership-container .section-desc {
+    font-size: 18px;
     color: #fff;
     line-height: 1.5;
     margin-bottom: 30px;
     font-weight: 400;
 }
 
-.info-card-list {
+.membership-container .info-card-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -131,7 +136,7 @@
     align-items: center;
 }
 
-.info-card {
+.membership-container .info-card {
     width: 320px;
     height: 140px;
     background-color: #2a2a2a;
@@ -143,7 +148,7 @@
     position: relative;
 }
 
-.info-item {
+.membership-container .info-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,19 +157,20 @@
     width: 100px;
 }
 
-.info-item img {
+.membership-container .info-item img {
     max-width: 80px;
     max-height: 70px;
     object-fit: contain;
 }
 
-.info-item span {
+.membership-container .info-item span {
     font-size: 15px;
     color: #fff;
     font-weight: 500;
+    font-family: 'SeoulNamsan', sans-serif;
 }
 
-.plus-circle {
+.membership-container .plus-circle {
     width: 24px;
     height: 24px;
     background-color: #444;
@@ -178,37 +184,37 @@
     margin-bottom: 25px;
 }
 
-.faq-section {
-    padding: 40px 20px;
+.membership-container .faq-section {
+    padding: 40px 35px;
 }
 
-.faq-badge {
+.membership-container .faq-badge {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background: url('/img/shape.png') no-repeat center;
     background-size: 100% 100%;
-    color: #5865F2;
-    padding: 12px 24px 18px;
-    font-size: 16px;
+    color: #232323;
+    padding: 8px 8px 22px;
+    font-size: 18px;
     font-weight: 700;
     margin-bottom: 35px;
     min-width: 150px;
 }
 
-.faq-list {
+.membership-container .faq-list {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.faq-item {
+.membership-container .faq-item {
     background: none;
     padding: 0;
     margin-bottom: 10px;
 }
 
-.faq-question {
+.membership-container .faq-question {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -216,31 +222,31 @@
     padding-left: 5px;
 }
 
-.q-icon {
+.membership-container .q-icon {
     background: #5865F2;
-    color: #fff;
+    color: #232323;
     width: 22px;
     height: 22px;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
-    font-weight: 800;
+    font-size: 16px;
+    font-weight: 700;
     flex-shrink: 0;
 }
 
-.q-text {
+.membership-container .q-text {
     font-size: 17px;
     font-weight: 600;
-    color: #fff;
+    color: #C8C8C8;
     line-height: 1.2;
 }
 
-.faq-answer {
+.membership-container .faq-answer {
     background: rgba(151, 163, 255, 0.15);
     border-radius: 14px;
-    padding: 20px;
+    padding: 17px;
     font-size: 14px;
     font-weight: 300;
     color: #ddd;
@@ -248,23 +254,23 @@
     margin-left: 0;
 }
 
-.footer-cta-area {
+.membership-container .footer-cta-area {
     background-color: #DDE2FF;
     padding: 50px 30px 60px;
     text-align: center;
     margin-top: 20px;
 }
 
-.cta-text {
+.membership-container .cta-text {
     font-size: 16px;
-    color: #222;
+    color: #232323;
     line-height: 1.5;
     margin-bottom: 30px;
     font-weight: 600;
 }
 
-.cta-btn {
-    width: 100%;
+.membership-container .cta-btn {
+    width: 70%;
     height: 60px;
     background: #5865F2;
     color: #fff;
@@ -276,6 +282,6 @@
     box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
 }
 
-.cta-btn:active {
+.membership-container .cta-btn:active {
     opacity: 0.8;
 }

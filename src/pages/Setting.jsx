@@ -1,12 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/Setting.css';
+import '../styles/setting.css';
 
 const Setting = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="setting-page-container">
+        <div className="setting-container">
             <div className="content">
                 <h1 className="main-text">
                     잠깐,<br />

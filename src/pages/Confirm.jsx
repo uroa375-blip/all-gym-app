@@ -6,7 +6,7 @@ const Confirm = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="confirm-page-container">
+        <div className="confirm-container">
             <div className="top-content">
                 <h1 className="page-title">좋아요!</h1>
                 <p className="page-desc">이제 올짐에서<br />마음에 드는 운동시설을<br />찾으러 가봐요.</p>

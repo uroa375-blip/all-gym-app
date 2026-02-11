@@ -6,7 +6,7 @@ const Age = () => {
     const navigate = useNavigate();
     const scrollerRef = useRef(null);
     const [selectedAge, setSelectedAge] = useState(28);
-    const itemHeight = 50;
+    const itemHeight = 60;
 
     const ages = Array.from({ length: 101 }, (_, i) => i);
 
@@ -25,7 +25,7 @@ const Age = () => {
     };
 
     return (
-        <div className="age-page-container">
+        <div className="age-container">
             <div className="top-content">
                 <h1 className="page-title">나이는요?</h1>
                 <p className="page-desc">동일한 나이대의 회원님들께서 많이 계신 곳을<br />추천해 드립니다.</p>
@@ -38,14 +38,20 @@ const Age = () => {
                     ref={scrollerRef}
                     onScroll={handleScroll}
                 >
-                    {ages.map((age) => (
-                        <div 
-                            key={age} 
-                            className={`number-item ${selectedAge === age ? 'active' : ''}`}
-                        >
-                            {age}
-                        </div>
-                    ))}
+                    {ages.map((age) => {
+                        const distance = Math.abs(selectedAge - age);
+                        let className = 'number-item';
+                        if (distance === 0) className += ' active';
+                        else if (distance === 1) className += ' level-1';
+                        else if (distance === 2) className += ' level-2';
+                        else if (distance === 3) className += ' level-3';
+                        
+                        return (
+                            <div key={age} className={className}>
+                                {age}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
 

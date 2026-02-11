@@ -23,7 +23,7 @@ const Report = () => {
     };
 
     return (
-        <div className="report-page-container">
+        <div className="report-container">
             <div className="header-tabs">
                 <button 
                     className={`tab ${activeTab === 'normal' ? 'active' : ''}`}

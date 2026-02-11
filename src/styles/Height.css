@@ -1,49 +1,62 @@
-.height-page-container {
+.height-container {
     width: 100%;
     height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 100px 30px 40px;
+    padding: 100px 0 0 0;
     background-color: #2C2C2C;
 }
 
-.left-content {
+.height-container .top-content {
     margin-bottom: 40px;
+    padding-left: 40px;
     text-align: left;
 }
 
-.page-title {
-    font-size: 28px;
-    font-weight: 400;
+.height-container .page-title {
+    font-size: 32px;
+    font-weight: 300;
     color: #ffffff;
     margin-bottom: 15px;
 }
 
-.page-desc {
+.height-container .page-desc {
     font-size: 14px;
     color: #aaaaaa;
     line-height: 1.5;
 }
 
-.main-display {
+.height-container .main-display {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 40px;
-    padding-left: 20px;
+    padding-left: 60px; /* Moved slightly more to the right */
 }
 
-.ruler-wrapper {
+.height-container .ruler-wrapper {
     position: relative;
-    width: 80px;
+    width: 60px;
     height: 400px;
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, 
+        transparent 0%, 
+        rgba(0,0,0,0.2) 15%, 
+        black 45%, 
+        black 55%, 
+        rgba(0,0,0,0.2) 85%, 
+        transparent 100%);
+    mask-image: linear-gradient(to bottom, 
+        transparent 0%, 
+        rgba(0,0,0,0.2) 15%, 
+        black 45%, 
+        black 55%, 
+        rgba(0,0,0,0.2) 85%, 
+        transparent 100%);
 }
 
-.ruler-scroller {
+.height-container .ruler-scroller {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
@@ -55,11 +68,11 @@
     scroll-snap-type: y mandatory;
 }
 
-.ruler-scroller::-webkit-scrollbar {
+.height-container .ruler-scroller::-webkit-scrollbar {
     display: none;
 }
 
-.tick-wrapper {
+.height-container .tick-wrapper {
     flex-shrink: 0;
     width: 100%;
     display: flex;
@@ -68,83 +81,86 @@
     scroll-snap-align: center;
 }
 
-.tick {
+.height-container .tick {
     height: 2px;
-    background-color: #666;
+    background-color: #5568F5; /* Updated color */
     border-radius: 2px;
 }
 
-.tick.short {
+.height-container .tick.short {
     width: 30px;
 }
 
-.tick.long {
+.height-container .tick.long {
     width: 50px;
 }
 
-.center-line {
+.height-container .center-line {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    width: 80px;
+    width: 60px;
     height: 4px;
-    background-color: #5865F2;
+    background-color: #5568F5; /* Consistent with ticks */
     z-index: 10;
     border-radius: 2px;
 }
 
-.height-text {
+.height-container .height-text {
     display: flex;
     align-items: baseline;
 }
 
-.height-value {
-    font-size: 60px;
+.height-container .height-value {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 64px; /* Reduced to 64px */
     font-weight: 700;
-    color: #5865F2;
+    color: #7888FF; /* Updated color */
     margin-right: 5px;
 }
 
-.height-unit {
+.height-container .height-unit {
+    font-family: 'Pretendard', sans-serif;
     font-size: 24px;
-    color: #ffffff;
-    opacity: 0.8;
+    color: #7888FF; /* Consistent color */
+    opacity: 1;
 }
 
-.bottom-actions {
+.height-container .bottom-actions {
     display: flex;
+    justify-content: center;
     gap: 15px;
     margin-top: auto;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
-.btn {
-    height: 56px;
-    border-radius: 28px;
+.height-container .btn {
+    width: 162px;
+    height: 54px;
+    border-radius: 27px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
-    font-weight: 600;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
     text-decoration: none;
     cursor: pointer;
     border: none;
     transition: opacity 0.2s;
 }
 
-.btn:active {
+.height-container .btn:active {
     opacity: 0.8;
 }
 
-.btn-prev {
-    flex: 1;
+.height-container .btn-prev {
     background-color: #444;
     color: #ffffff;
 }
 
-.btn-next {
-    flex: 1;
+.height-container .btn-next {
     background-color: #5865F2;
     color: #ffffff;
 }

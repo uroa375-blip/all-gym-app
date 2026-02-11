@@ -25,8 +25,8 @@ const Height = () => {
     };
 
     return (
-        <div className="height-page-container">
-            <div className="left-content">
+        <div className="height-container">
+            <div className="top-content">
                 <h1 className="page-title">키는요?</h1>
                 <p className="page-desc">P.T 상담시 입력하지 않으셔도 자동으로 정보를<br />제공해 드립니다.</p>
             </div>

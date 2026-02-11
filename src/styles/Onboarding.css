@@ -1,9 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Scoped styles for Onboarding page */
 .onboarding-body {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     overflow-x: hidden;
@@ -12,22 +7,21 @@
     background-color: #000;
 }
 
-.onboarding-container {
-    width: 390px;
-    height: 100vh;
+.onboarding-body .onboarding-container {
+    width: 100%;
+    height: 100%;
     position: relative;
     overflow: hidden;
-    margin: 0 auto;
 }
 
 /* 배경 이미지 */
-.background-image {
+.onboarding-body .background-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../assets/mainpic.png');
+    background-image: url('/img/mainpic.png');
     background-size: cover;
     background-position: center;
     filter: grayscale(100%);
@@ -35,7 +29,7 @@
 }
 
 /* 어두운 오버레이 */
-.overlay {
+.onboarding-body .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -51,23 +45,23 @@
 }
 
 /* 컨텐츠 영역 */
-.content {
+.onboarding-body .content {
     position: relative;
     z-index: 3;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 80px 0 120px; /* Removed side padding */
+    padding: 80px 0 120px;
 }
 
 /* 상단 텍스트 */
-.top-text {
+.onboarding-body .top-text {
     margin-top: 20px;
-    padding: 0 30px; /* Added side padding for text */
+    padding: 0 30px;
 }
 
-.top-text h1 {
+.onboarding-body .top-text h1 {
     font-size: 50px;
     font-weight: 400;
     color: #ffffff;
@@ -75,49 +69,49 @@
     letter-spacing: -0.5px;
 }
 
-.top-text .highlight {
+.onboarding-body .top-text .highlight {
     font-weight: 300;
     font-size: 30px;
 }
 
-.indent-text {
+.onboarding-body .indent-text {
     margin-left: 50px;
     display: inline-block;
 }
 
 /* ALL GYM 로고 섹션 */
-.logo-section {
+.onboarding-body .logo-section {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
 }
 
-.logo-wrapper {
+.onboarding-body .logo-wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 0;
 }
 
-.logo-all-img {
-    width: auto; /* Actual size */
+.onboarding-body .logo-all-img {
+    width: auto;
     height: auto;
     display: block;
-    align-self: flex-start; /* Left align */
+    align-self: flex-start;
     margin-bottom: 30px;
 }
 
-.logo-gym-img {
-    width: auto; /* Actual size */
+.onboarding-body .logo-gym-img {
+    width: auto;
     height: auto;
     display: block;
-    align-self: flex-end; /* Right align */
+    align-self: flex-end;
     margin-left: 0;
 }
 
 /* 하단 그라데이션 */
-.bottom-gradient {
+.onboarding-body .bottom-gradient {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -135,13 +129,13 @@
 }
 
 /* 추가 정보 섹션들 */
-.info-sections {
+.onboarding-body .info-sections {
     width: 390px;
     margin: 0 auto;
     background: linear-gradient(180deg, #5568F5 0%, #323DBF 100%);
 }
 
-.info-section {
+.onboarding-body .info-section {
     width: 100%;
     max-width: 390px;
     margin: 0 auto;
@@ -151,11 +145,11 @@
     gap: 30px;
 }
 
-.section-content {
+.onboarding-body .section-content {
     text-align: left;
 }
 
-.section-title {
+.onboarding-body .section-title {
     font-size: 40px;
     font-weight: 500;
     color: #ffffff;
@@ -163,15 +157,14 @@
     line-height: 1.3;
 }
 
-/* Specific styling for longer titles as requested */
-.section-2 .section-title,
-.section-3 .section-title,
-.section-4 .section-title {
+.onboarding-body .section-2 .section-title,
+.onboarding-body .section-3 .section-title,
+.onboarding-body .section-4 .section-title {
     font-size: 30px;
     font-weight: 500;
 }
 
-.section-text {
+.onboarding-body .section-text {
     font-size: 24px;
     font-weight: 300;
     color: #ffffff;
@@ -180,77 +173,50 @@
     letter-spacing: -0.04em;
 }
 
-/* Specific styling for section texts as requested */
-.section-2 .section-text,
-.section-3 .section-text,
-.section-4 .section-text {
+.onboarding-body .section-2 .section-text,
+.onboarding-body .section-3 .section-text,
+.onboarding-body .section-4 .section-text {
     font-size: 18px;
     font-weight: 300;
     letter-spacing: -0.03em;
 }
 
-.section-image {
+.onboarding-body .section-image {
     width: 100%;
     overflow: hidden;
 }
 
-.section-1 .section-image {
+.onboarding-body .section-1 .section-image {
     margin-left: 80px;
 }
 
-.section-image img {
-    /* width: 100%; */
-    /* height: auto; */
+.onboarding-body .section-image img {
     display: block;
 }
 
-/* 반응형 */
-@media (max-width: 390px) {
-    .onboarding-container,
-    .info-sections {
-        width: 100%;
-    }
-
-    .top-text h1 {
-        font-size: 50px;
-    }
-
-    .logo-all {
-        font-size: 60px;
-    }
-
-    .logo-gym {
-        font-size: 90px;
-    }
-
-    .content {
-        padding: 60px 0px 100px;
-    }
-}
-
 /* ALL GYM POINT Section */
-.point-section {
+.onboarding-body .point-section {
     width: 390px;
     margin: 0 auto;
     background-color: #222222;
-    padding: 60px 30px 80px; /* Added bottom padding */
+    padding: 60px 30px 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     color: #fff;
-    border-radius: 0 0 20px 20px; /* Rounded corners at the bottom */
+    border-radius: 0 0 20px 20px;
 }
 
-.point-title {
+.onboarding-body .point-title {
     font-size: 36px;
     font-weight: 800;
-    color: #7b88ff; /* Periwinkle blue */
+    color: #7b88ff;
     margin-bottom: 20px;
     letter-spacing: -0.5px;
 }
 
-.point-subtitle {
+.onboarding-body .point-subtitle {
     font-size: 18px;
     color: #7b88ff;
     line-height: 1.4;
@@ -258,7 +224,7 @@
     font-weight: 500;
 }
 
-.point-circles {
+.onboarding-body .point-circles {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -267,18 +233,14 @@
     width: 100%;
 }
 
-.point-circles .top {
-    margin-bottom: 0;
-}
-
-.circle-row {
+.onboarding-body .circle-row {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
 }
 
-.circle-item {
+.onboarding-body .circle-item {
     width: 90px;
     height: 90px;
     border: 1px solid rgba(255, 255, 255, 0.6);
@@ -291,14 +253,14 @@
     white-space: nowrap;
 }
 
-.plus-sign {
+.onboarding-body .plus-sign {
     font-size: 40px;
     font-weight: 300;
     color: #fff;
     margin: 0 5px;
 }
 
-.arrow-down {
+.onboarding-body .arrow-down {
     width: 40px;
     height: 40px;
     background: linear-gradient(to bottom, rgba(255,255,255,0.8), transparent);
@@ -306,20 +268,20 @@
     margin-bottom: 50px;
 }
 
-.point-footer {
+.onboarding-body .point-footer {
     width: 100%;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding-top: 40px;
     position: relative;
 }
 
-.footer-title {
+.onboarding-body .footer-title {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-.footer-desc {
+.onboarding-body .footer-desc {
     font-size: 14px;
     color: #999;
     line-height: 1.6;
@@ -327,7 +289,17 @@
 }
 
 @media (max-width: 390px) {
-    .point-section {
+    .onboarding-body .onboarding-container,
+    .onboarding-body .info-sections,
+    .onboarding-body .point-section {
         width: 100%;
+    }
+
+    .onboarding-body .top-text h1 {
+        font-size: 50px;
+    }
+
+    .onboarding-body .content {
+        padding: 60px 0px 100px;
     }
 }

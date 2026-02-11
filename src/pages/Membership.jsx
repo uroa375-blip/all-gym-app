@@ -22,16 +22,21 @@ const Membership = () => {
     ];
 
     return (
-        <div className="membership-page-container">
+        <div className="membership-container">
             <section className="hero-section">
+                <img src="/assets/effect.png" alt="effect" className="hero-effect-bg" />
                 <p className="hero-subtitle">여러 가지 운동을 하나의 회원권으로<br />최대 할인을 받고 즐길 수 있는 방법</p>
                 <h1 className="hero-title">올짐 통합회원권</h1>
                 <div className="collage-container">
-                    <img src="/assets/membership1.png" alt="헬스장" className="collage-img img-top-left" />
-                    <img src="/assets/membership2.png" alt="헬스장" className="collage-img img-tall" />
-                    <img src="/assets/membership3.png" alt="헬스장" className="collage-img img-bot-left" />
-                    <img src="/assets/membership4.png" alt="헬스장" className="collage-img img-big" />
-                    <img src="/assets/membership5.png" alt="헬스장" className="collage-img img-bot-right" />
+                    <div className="collage-column left">
+                        <img src="/assets/membership1.png" alt="kettlebell" className="collage-img img-1" />
+                        <img src="/assets/membership3.png" alt="pilates" className="collage-img img-3" />
+                    </div>
+                    <div className="collage-column right">
+                        <img src="/assets/membership2.png" alt="equipment" className="collage-img img-2" />
+                        <img src="/assets/membership4.png" alt="treadmill" className="collage-img img-4" />
+                        <img src="/assets/membership5.png" alt="cycle" className="collage-img img-5" />
+                    </div>
                 </div>
             </section>
 
@@ -57,7 +62,7 @@ const Membership = () => {
                         </div>
                         <div className="plus-circle">+</div>
                         <div className="info-item">
-                            <img src="/assets/pilates.png" alt="필라테스" />
+                            <img src="/assets/yoga.png" alt="필라테스" />
                             <span>필라테스</span>
                         </div>
                     </div>

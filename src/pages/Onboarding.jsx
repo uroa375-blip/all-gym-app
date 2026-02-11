@@ -1,14 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Onboarding.css';
-const allImg = '/assets/shape1.png';
-const gymImg = '/assets/shape2.png';
-const pic1 = '/assets/pic1.png';
-const pic2 = '/assets/pic2.png';
-const pic3 = '/assets/pic3.png';
+
+const allImg = '/img/all.png';
+const gymImg = '/img/gym.png';
+const pic1 = '/img/pic1.png';
+const pic2 = '/img/pic2.png';
+const pic3 = '/img/pic3.png';
 
 const Onboarding = () => {
+    const navigate = useNavigate();
+
     return (
-        <div className="onboarding-body">
+        <div className="onboarding-body" onClick={() => navigate('/setting')} style={{ cursor: 'pointer' }}>
             <div className="onboarding-container">
                 {/* 배경 이미지 */}
                 <div className="background-image"></div>

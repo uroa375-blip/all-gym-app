@@ -24,7 +24,7 @@ const PT = () => {
     ]);
 
     return (
-        <div className="pt-page-container">
+        <div className="pt-container">
             <header className="page-header">
                 <h1 className="page-title">P.T 가격 비교</h1>
             </header>

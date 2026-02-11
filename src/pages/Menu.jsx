@@ -6,7 +6,7 @@ const Menu = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="menu-page-container">
+        <div className="menu-container">
             <div className="menu-list">
                 <button className="menu-btn" onClick={() => navigate('/place')}>내 주변 운동 시설</button>
                 <button className="menu-btn" onClick={() => navigate('/map')}>지도에서 찾기</button>

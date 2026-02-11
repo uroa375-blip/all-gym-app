@@ -36,7 +36,7 @@ const PlaceCard = ({ data, onCartClick, onImageClick }) => {
                 </div>
                 {!data.new && (
                     <div className="card-actions">
-                        {data.event ? <span className="tag event">event</span> : <span />}
+                        {data.event ? <span className="tag event">EVENT</span> : <span />}
                         <div className="cart-icon" onClick={onCartClick}>
                             <img src="/assets/cart.png" alt="cart" className="cart-icon-img" />
                         </div>
