@@ -40,7 +40,7 @@ const Height = () => {
                         onScroll={handleScroll}
                     >
                         {ticks.map((t) => (
-                            <div className="tick-wrapper" key={t} style={{ height: `${pixelsPerCm}px` }}>
+                            <div className="tick-wrapper" key={t}>
                                 <div className={`tick ${t % 5 === 0 ? 'long' : 'short'}`}></div>
                             </div>
                         ))}

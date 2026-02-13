@@ -12,7 +12,7 @@ const Onboarding = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="onboarding-body" onClick={() => navigate('/setting')} style={{ cursor: 'pointer' }}>
+        <div className="onboarding-body" onClick={() => navigate('/setting')}>
             <div className="onboarding-container">
                 {/* 배경 이미지 */}
                 <div className="background-image"></div>

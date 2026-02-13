@@ -77,6 +77,11 @@
     scrollbar-width: none;
     padding: 0 50%;
     scroll-snap-type: x mandatory;
+    cursor: grab;
+}
+
+.weight-container .ruler-scroller.grabbing {
+    cursor: grabbing;
 }
 
 .weight-container .ruler-scroller::-webkit-scrollbar {
@@ -85,6 +90,7 @@
 
 .weight-container .tick-wrapper {
     flex-shrink: 0;
+    width: 20px;
     height: 60px;
     display: flex;
     justify-content: center;

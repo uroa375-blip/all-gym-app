@@ -46,32 +46,35 @@ const Cart = () => {
                 </div>
 
                 <div className="gym-image-container">
-                    <img src="/assets/membership1.png" alt="헬스장 이미지" className="gym-image" />
+                    <img src="/assets/payment.png" alt="헬스장 이미지" className="gym-image" />
                 </div>
 
                 <div className="price-card">
-                    <div className="price-header">
-                        <span className="membership-badge">출석 실패시</span>
+                    <div className="price-top">
+                        <div className="m-info">
+                            <span className="duration">3개월</span>
+                            <span className="original-price">250,000원</span>
+                            <span className="discount-rate">15%</span>
+                        </div>
+                        <div className="m-price-group">
+                            <span className="price-label">올짐 회원가</span>
+                            <span className="final-price">212,500원</span>
+                        </div>
                         <button className="delete-btn" onClick={handleDelete} aria-label="삭제">
-                            <svg className="delete-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
-                            </svg>
+                            <img src="/assets/Waste.png" alt="삭제" className="delete-icon" />
                         </button>
                     </div>
 
-                    <div className="price-info">
-                        <span className="duration">3개월</span>
-                        <span className="original-price">250,000원</span>
-                        <span className="discount-rate">15%</span>
-                        <span className="final-price">212,500원</span>
-                    </div>
+                    <div className="price-divider"></div>
 
-                    <div className="quantity-control">
+                    <div className="quantity-section">
                         <span className="quantity-label">갯수</span>
-                        <div className="quantity-buttons">
-                            <button className="quantity-btn" onClick={handleDecrease}>▼</button>
-                            <span className="quantity-value">{quantity}</span>
-                            <button className="quantity-btn" onClick={handleIncrease}>▲</button>
+                        <div className="quantity-input-group">
+                            <div className="quantity-number-box">{quantity}</div>
+                            <div className="quantity-arrows">
+                                <button className="q-arrow q-up" onClick={handleIncrease}>▲</button>
+                                <button className="q-arrow q-down" onClick={handleDecrease}>▼</button>
+                            </div>
                         </div>
                     </div>
                 </div>

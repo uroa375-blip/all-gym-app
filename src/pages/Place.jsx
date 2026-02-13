@@ -98,6 +98,15 @@ const Place = () => {
 
     return (
         <div className="place-page-container">
+            <div className="header">
+                <img 
+                    src="/img/thumbnail_icon.png" 
+                    alt="그리드" 
+                    className="grid-icon" 
+                    onClick={() => navigate('/thumbnail')}
+                />
+                <img src="/img/list_icon.png" alt="메뉴" className="menu-icon" />
+            </div>
             <section className="section nearby">
                 <h2 className="section-title">내 주변 가까운 곳</h2>
                 <div className="scroll-container horizontal-scroll">
@@ -110,7 +119,7 @@ const Place = () => {
                         />
                     ))}
                 </div>
-                <div className="scroll-container horizontal-scroll" style={{ marginTop: '20px' }}>
+                <div className="scroll-container horizontal-scroll margin-top-20">
                     {nearbyData2.map((item, idx) => (
                         <PlaceCard 
                             key={idx} 
@@ -123,7 +132,7 @@ const Place = () => {
             </section>
 
             <section className="section ranking">
-                <h2 className="section-title" style={{ paddingLeft: '20px' }}>랭킹 Top 10</h2>
+                <h2 className="section-title">랭킹 Top 10</h2>
                 <div className="info-box">
                     <p>1주간 리뷰, 평점, 회원권 판매 순위를 통계하여 10위 안에 선정된 운동시설입니다.</p>
                     <p>순위는 매주 월요일 06:00시 기준으로 변동됩니다.</p>

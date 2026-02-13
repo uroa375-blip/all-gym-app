@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Thumbnail.css';
 
 const Thumbnail = () => {
+    const navigate = useNavigate();
     const [activeFilter, setActiveFilter] = useState('헬스');
 
     const thumbs = [
         'thumb1.png', 'thumb2.png', 'thumb3.png', 'thumb4.png', 'thumb5.png',
         'thumb6.png', 'thumb9.png', 'thumb10.png', 'thumb11.png', 'thumb12.png',
-        'thumb13.png', 'thumb14.png', 'thumb15.png', 'thumb17.png', 'thumb1.png'
+        'thumb13.png', 'thumb14.png'
     ];
 
     const filters = [
@@ -18,8 +20,18 @@ const Thumbnail = () => {
     return (
         <div className="thumbnail-page-container">
             <div className="header">
-                <img src="/assets/plus.png" alt="그리드" className="grid-icon" /> // Placeholder for grid-icon
-                <img src="/assets/list.png" alt="메뉴" className="menu-icon" /> // Placeholder for menu-icon
+                <img 
+                    src="/img/thumbnail_icon.png" 
+                    alt="그리드" 
+                    className="grid-icon" 
+                    onClick={() => navigate('/thumbnail')}
+                />
+                <img 
+                    src="/img/list_icon.png" 
+                    alt="메뉴" 
+                    className="menu-icon" 
+                    onClick={() => navigate('/price')}
+                />
             </div>
 
             <div className="gallery-grid">

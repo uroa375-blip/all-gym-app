@@ -39,17 +39,17 @@ const Weight = () => {
         isDragging.current = true;
         startX.current = e.pageX - scrollerRef.current.offsetLeft;
         scrollLeftState.current = scrollerRef.current.scrollLeft;
-        scrollerRef.current.style.cursor = 'grabbing';
+        scrollerRef.current.classList.add('grabbing');
     };
 
     const handleMouseLeave = () => {
         isDragging.current = false;
-        if (scrollerRef.current) scrollerRef.current.style.cursor = 'grab';
+        if (scrollerRef.current) scrollerRef.current.classList.remove('grabbing');
     };
 
     const handleMouseUp = () => {
         isDragging.current = false;
-        if (scrollerRef.current) scrollerRef.current.style.cursor = 'grab';
+        if (scrollerRef.current) scrollerRef.current.classList.remove('grabbing');
     };
 
     const handleMouseMove = (e) => {
@@ -83,10 +83,9 @@ const Weight = () => {
                     onMouseLeave={handleMouseLeave}
                     onMouseUp={handleMouseUp}
                     onMouseMove={handleMouseMove}
-                    style={{ cursor: 'grab' }}
                 >
                     {ticks.map((t) => (
-                        <div className="tick-wrapper" key={t} style={{ width: `${pixelsPerKg}px` }}>
+                        <div className="tick-wrapper" key={t}>
                             <div className={`tick ${t % 5 === 0 ? 'long' : 'short'}`}></div>
                         </div>
                     ))}

@@ -30,14 +30,19 @@ const PriceCard = ({ data, isSelected, onSelect, onCartClick }) => {
 
 const GymEntry = ({ gym, onCartClick }) => {
     const [selectedId, setSelectedId] = useState(0);
+    const [reviewCount, setReviewCount] = useState(gym.reviews || 0);
+
+    const handleRatingClick = () => {
+        setReviewCount(prev => prev + 1);
+    };
 
     return (
         <div className="gym-entry">
             <div className="gym-header">
                 <span className="gym-title">{gym.title}</span>
-                <div className="gym-rating">
+                <div className="gym-rating" onClick={handleRatingClick} style={{ cursor: 'pointer' }}>
                     <img src="/assets/pinkstar.png" alt="star" />
-                    <span>{gym.rating}({gym.reviews})</span>
+                    <span>{gym.rating}({reviewCount})</span>
                 </div>
             </div>
             <div className="gym-photo">
@@ -129,16 +134,21 @@ const Price = () => {
 
     return (
         <div className="price-page-container">
+            <div className="header">
+                <img 
+                    src="/img/thumbnail_icon.png" 
+                    alt="그리드" 
+                    className="grid-icon" 
+                    onClick={() => navigate('/thumbnail')}
+                />
+                <img src="/img/list_icon.png" alt="메뉴" className="menu-icon" />
+            </div>
             {gyms.map((gym, idx) => (
                 <GymEntry key={idx} gym={gym} onCartClick={() => navigate('/cart')} />
             ))}
 
             <div className="report-banner" onClick={() => navigate('/report')}>
-                <img src="/assets/character.png" alt="character" className="char-img" />
-                <div className="report-text">
-                    <div className="report-main">정보가 달라요 !</div>
-                    <div className="report-sub">현장과 다른 정보가 있나요? 제보해주세요!</div>
-                </div>
+                <img src="/img/event.png" alt="event" className="event-img" />
             </div>
         </div>
     );

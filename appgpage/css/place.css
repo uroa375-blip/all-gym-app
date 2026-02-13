@@ -5,7 +5,8 @@
 }
 
 body {
-    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    /* ✅ Pretendard 적용 (Variable 우선) */
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     width: 100%;
     min-height: 100vh;
     background-color: #1B1B1B;
@@ -16,10 +17,12 @@ body {
 
 .list-container {
     width: 390px;
-    min-height: 844px;
+    height: 844px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    padding-bottom: 50px;
     position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .section {
@@ -29,6 +32,18 @@ body {
 .section.nearby {
     background-color: #282828;
     padding-bottom: 30px;
+}
+
+.section.nearby .card-item {
+    width: 234px;
+    border-radius: 12px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.section.nearby .card-image-wrap {
+    height: 156px;
+    border-radius: 10px 10px 0 0;
 }
 
 .section.ranking {
@@ -64,7 +79,7 @@ body {
 
 /* Info Box */
 .info-box {
-    background-color: rgba(85, 104, 245, 0.5); /* #5568F5 with 50% opacity */
+    background-color: rgba(85, 104, 245, 0.5);
     width: 100%;
     height: 190px;
     margin: 20px 0 30px 0; 
@@ -73,8 +88,11 @@ body {
     flex-direction: column;
     justify-content: center;
     color: #fff;
-    font-family: 'Pretendard', sans-serif;
-    font-weight: 400; /* Regular */
+
+    /* ✅ Pretendard 적용 (Variable 우선) */
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    font-weight: 400;
     font-size: 20px;
     line-height: 26px;
     word-break: keep-all;
@@ -82,7 +100,7 @@ body {
 }
 
 .info-box p {
-    margin-bottom: 26px; /* Match line gap for paragraph spacing */
+    margin-bottom: 26px;
 }
 
 .info-box p:last-child {
@@ -104,9 +122,10 @@ body {
 /* Cards */
 .card-item {
     flex-shrink: 0;
-    width: 164px;
-    background-color: #242424; /* 카드는 배경보다 약간 밝게 유지 (이미지 스타일) */
+    width: 170px;
+    background-color: #242424;
     border-radius: 12px;
+    border-top-right-radius: 30px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -115,7 +134,7 @@ body {
 
 .card-image-wrap {
     width: 100%;
-    height: 100px;
+    height: 230px;
     position: relative;
     overflow: hidden;
     background-color: #333;
@@ -221,7 +240,7 @@ body {
 .cart-icon-img {
     width: 20px;
     height: 20px;
-    filter: brightness(0) invert(1); /* White cart icon */
+    filter: brightness(0) invert(1);
     opacity: 0.8;
 }
 
@@ -234,8 +253,12 @@ body {
     color: #fff;
     padding: 4px 10px;
     border-radius: 20px;
-    font-size: 14px;
-    font-weight: 700;
+
+    /* ✅ Stick No Bills (formerly Post No Bills Jaffna) - 강제 적용 */
+    font-family: "Stick No Bills", sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
+
     backdrop-filter: blur(4px);
     z-index: 2;
 }

@@ -57,7 +57,9 @@ const Map = () => {
             <div className="search-bar-wrap">
                 <div className="search-bar">
                     <input type="text" placeholder="강남역" defaultValue="강남역" />
-                    <button className="btn-search">🔍</button>
+                    <button className="btn-search">
+                        <span className="material-symbols-outlined">search</span>
+                    </button>
                 </div>
             </div>
             <div id="map" ref={mapRef}></div>

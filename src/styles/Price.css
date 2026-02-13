@@ -4,6 +4,22 @@
     color: #ffffff;
     display: flex;
     flex-direction: column;
+    padding-bottom: 80px; /* Allowance for sticky banner */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background: #1B1B1B;
+    z-index: 10;
+}
+
+.grid-icon, .menu-icon {
+    cursor: pointer;
 }
 
 .gym-entry {
@@ -18,21 +34,22 @@
 }
 
 .gym-title {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 700;
+    color: #ffffff;
 }
 
 .gym-rating {
     display: flex;
     align-items: center;
     gap: 4px;
-    color: #FF55E5;
-    font-size: 14px;
+    color: #ffffff;
+    font-size: 20px;
 }
 
 .gym-rating img {
-    width: 14px;
-    height: 14px;
+    width: 20px;
+    height: 20px;
 }
 
 .gym-photo {
@@ -97,7 +114,7 @@
 .price-card .duration {
     font-size: 20px;
     font-weight: 500;
-    color: #ffffff;
+    color: #000000;
 }
 
 .price-card.selected .duration {
@@ -135,7 +152,7 @@
 .price-card .final-price {
     font-size: 24px;
     font-weight: 700;
-    color: #ffffff;
+    color: #000000;
     line-height: normal;
 }
 
@@ -162,34 +179,15 @@
 }
 
 .report-banner {
-    background-color: #5D6DFF;
-    margin-top: 20px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
+    position: sticky;
+    bottom: 70px;
+    width: 100%;
+    z-index: 100;
     cursor: pointer;
-    position: relative;
+    margin-top: 20px;
 }
 
-.report-banner .char-img {
-    width: 50px;
-    margin-right: 15px;
-}
-
-.report-text {
-    flex-grow: 1;
-}
-
-.report-main {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 4px;
-    color: #fff;
-}
-
-.report-sub {
-    font-size: 11px;
-    opacity: 0.8;
-    color: #fff;
+.report-banner .event-img {
+    width: 100%;
+    display: block;
 }

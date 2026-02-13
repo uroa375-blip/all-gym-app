@@ -133,19 +133,23 @@
 
 .pt-container .trainer-item {
     display: flex;
-    background-color: #1f1f1f;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 15px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
     gap: 15px;
+    width: 350px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .pt-container .trainer-img-box {
-    width: 120px;
-    height: 120px;
+    width: 126px;
+    height: 126px;
     border-radius: 0;
     overflow: hidden;
-    background-color: #555;
+    background-color: #333;
     flex-shrink: 0;
 }
 
@@ -166,56 +170,63 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .pt-container .t-name {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 5px;
+    margin: 0;
+    line-height: 1.2;
 }
 
 .pt-container .t-gym {
-    font-size: 12px;
-    color: #aaa;
-    margin-bottom: 3px;
+    font-size: 14px;
+    color: #999;
+    margin-top: 10px;
+    margin-bottom: 4px;
 }
 
 .pt-container .t-loc {
-    font-size: 10px;
+    font-size: 12px;
     color: #777;
+    margin: 0;
 }
 
 .pt-container .t-rating {
-    font-size: 13px;
+    font-size: 14px;
     color: #fff;
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 4px;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 .pt-container .star-icon {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
 }
 
 .pt-container .info-bottom {
     display: flex;
     justify-content: flex-end;
     gap: 8px;
-    margin-top: 10px;
+    margin-top: auto;
 }
 
 .pt-container .btn-detail {
     width: 62px;
     height: 24px;
     background-color: #fff;
-    color: #333;
-    border: none;
+    color: #5865F2;
+    border: 1px solid #5865F2;
     border-radius: 5px;
-    font-family: 'Pretendard', sans-serif;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 700;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -229,9 +240,8 @@
     color: #fff;
     border: none;
     border-radius: 5px;
-    font-family: 'Pretendard', sans-serif;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 700;
     cursor: pointer;
     display: flex;
     justify-content: center;

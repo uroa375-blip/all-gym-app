@@ -5,6 +5,21 @@
     flex-direction: column;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background: #1B1B1B;
+    z-index: 10;
+}
+
+.grid-icon, .menu-icon {
+    cursor: pointer;
+}
+
 .section {
     padding: 30px 20px 0 20px;
 }
@@ -12,11 +27,24 @@
 .section.nearby {
     background-color: #282828;
     padding-bottom: 30px;
+    padding-right: 0;
+}
+
+.section.nearby .card-item {
+    width: 234px;
+    border-radius: 12px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.section.nearby .card-image-wrap {
+    height: 156px;
+    border-radius: 10px 10px 0 0;
 }
 
 .section.ranking {
     background-color: #1B1B1B;
-    padding-bottom: 50px;
+    padding: 30px 0 50px 0;
 }
 
 .section.ranking .grid-container {
@@ -51,6 +79,7 @@
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 20px;
+    padding-left: 20px;
 }
 
 .scroll-container {
@@ -70,10 +99,14 @@
     display: none;
 }
 
+.margin-top-20 {
+    margin-top: 20px;
+}
+
 .info-box {
     background-color: rgba(85, 104, 245, 0.5);
     width: 100%;
-    margin: 20px 0 30px 0; 
+    margin: 20px 0 30px 0;
     padding: 30px 35px;
     display: flex;
     flex-direction: column;
@@ -226,11 +259,11 @@
     left: 8px;
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
-    padding: 2px 10px; /* Reduced vertical padding slightly for the taller font */
+    padding: 2px 10px;
     border-radius: 20px;
-    font-family: 'Post No Bills Jaffna', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
+    font-family: 'Stick No Bills', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 600 !important;
     backdrop-filter: blur(4px);
     z-index: 2;
     display: flex;
@@ -241,6 +274,7 @@
 .section.newly-registered {
     background-color: #282828;
     padding-bottom: 40px;
+    padding-right: 0;
 }
 
 .tag.new-badge {

@@ -16,15 +16,17 @@ const Profile = () => {
         <div className="profile-page-container">
             <div className="header-section">
                 <div className="banner-img">
-                    <img src="/assets/pic1.png" alt="헬스장" />
-                    <div className="heart-icon"><img src="/assets/heart.png" alt="좋아요" /></div>
-                </div>
-                <div className="profile-circle">
-                    <img src="/assets/profile1.png" alt="트레이너 프로필" />
+                    <img src="/img/profile2.png" alt="헬스장 배경" />
                 </div>
             </div>
 
             <div className="basic-info">
+                <div className="profile-circle">
+                    <img src="/img/profile1.png" alt="트레이너 프로필" />
+                </div>
+                <div className="heart-icon">
+                    <img src="/img/heart.png" alt="좋아요" />
+                </div>
                 <h1 className="t-name">조정훈 선생님</h1>
                 <p className="t-gym">트레이더 짐</p>
                 <p className="t-loc">서울 관악구 난곡로 192-38</p>
@@ -53,15 +55,24 @@ const Profile = () => {
                         <img src="/assets/graph.png" alt="평점 차트" />
                     </div>
                     <div className="rating-info">
-                        <div className="star-score">★ 4.8(65)</div>
-                        <p className="rating-desc">친절하고 꼼꼼하게<br />지도를 잘해주셔서<br />처음하는 운동인데<br />너무 좋았어요</p>
+                        <div className="star-score">
+                            <img src="/img/bluestar.png" alt="star" className="score-star-icon" />
+                            <span className="score-num">4.8(65)</span>
+                        </div>
+                        <div className="rating-disclaimer">
+                            올짐에서 1회 이상의<br />
+                            회원권을 구매하시고<br />
+                            이용하신 회원님들의<br />
+                            리뷰와 별점만을<br />
+                            반영한 통계입니다.
+                        </div>
                         <button className="btn-consult">1:1 상담</button>
                     </div>
                 </div>
             </section>
 
             <section className="section qual-section">
-                <h2 className="section-title">자격/입상</h2>
+                <div className="section-title">자격/입상</div>
                 <ul className="info-list">
                     <li>생활체육지도자 3급 (2010)</li>
                     <li>생활스포츠지도사 2급 보디빌딩</li>
@@ -73,11 +84,11 @@ const Profile = () => {
             </section>
 
             <section className="section edu-section">
-                <h2 className="section-title">학력/경력</h2>
+                <div className="section-title">학력/경력</div>
                 <ul className="info-list">
                     <li>중앙대학교 체육대학 졸업</li>
                     <li>전 스피드업 헬스클럽 트레이너</li>
-                    <li>전 아이캔 휘트니스 트레이너</li>
+                    <li>전 아이언 휘트니스 트레이너</li>
                     <li>전 아마존 짐 트레이너</li>
                     <li>현 트레이더 짐 트레이너</li>
                 </ul>
@@ -85,11 +96,11 @@ const Profile = () => {
 
             <div className="social-links">
                 <div className="social-item">
-                    <img src="/assets/insta.png" alt="인스타그램" />
+                    <img src="/img/insta.png" alt="인스타그램" />
                     <span>인스타그램</span>
                 </div>
                 <div className="social-item">
-                    <img src="/assets/youtube.png" alt="유튜브" />
+                    <img src="/img/youtube.png" alt="유튜브" />
                     <span>youtube</span>
                 </div>
             </div>
@@ -98,14 +109,14 @@ const Profile = () => {
                 <h2 className="section-title">회원권</h2>
                 {memberships.map((m, idx) => (
                     <div className="membership-item" key={idx}>
-                        <div className="m-left">
+                        <div className="m-info-group">
                             <span className="m-count">{m.count}</span>
                             <span className="m-original">{m.original}</span>
-                        </div>
-                        <div className="m-right">
-                            {m.event && <span className="badge-event">EVENT</span>}
                             <span className="m-discount">{m.discount}</span>
                             <span className="m-price">{m.price}</span>
+                        </div>
+                        <div className="m-action-group">
+                            {m.event && <span className="badge-event">EVENT</span>}
                             <img 
                                 src="/assets/cart.png" 
                                 alt="장바구니" 

@@ -17,20 +17,20 @@
 }
 
 .grid-icon, .menu-icon {
-    width: 28px;
-    height: 28px;
     cursor: pointer;
 }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    padding: 0 0 20px;
+    grid-template-columns: repeat(3, 110px);
+    gap: 4px;
+    padding: 0 0 10px;
+    justify-content: center;
 }
 
 .gallery-item {
-    aspect-ratio: 1;
+    width: 110px;
+    height: 110px;
     overflow: hidden;
     cursor: pointer;
     position: relative;
@@ -48,24 +48,29 @@
 }
 
 .filter-section {
-    padding: 20px;
+    padding: 30px 20px 10px;
     background: #2a2a2a;
-    padding-bottom: 70px;
+    padding-bottom: 50px;
 }
 
 .filter-buttons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 90px);
     gap: 10px;
+    justify-content: center;
 }
 
 .filter-btn {
-    padding: 12px 20px;
+    width: 90px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 25px;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s;

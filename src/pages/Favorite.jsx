@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Favorite.css';
 
-const FavoriteItem = ({ img, label, style }) => {
+const FavoriteItem = ({ img, label, className }) => {
     const [selected, setSelected] = useState(false);
     
     // Logic to handle image switching: 
@@ -12,8 +12,7 @@ const FavoriteItem = ({ img, label, style }) => {
 
     return (
         <div 
-            className={`scattered-item ${selected ? 'selected' : ''}`} 
-            style={style}
+            className={`scattered-item ${className} ${selected ? 'selected' : ''}`} 
             onClick={() => setSelected(!selected)}
         >
             <div className="icon-box">
@@ -28,12 +27,12 @@ const Favorite = () => {
     const navigate = useNavigate();
 
     const items = [
-        { img: 'crossfit.png', label: '크로스핏 · 스피닝', style: { top: '50px', left: '20px' } },
-        { img: 'pilates.png', label: '필라테스 · 요가', style: { top: '30px', right: '60px' } },
-        { img: 'ballet.png', label: '발레 · 댄스', style: { top: '160px', right: '20px' } },
-        { img: 'fitness.png', label: '헬스', style: { top: '220px', left: '100px' } },
-        { img: 'boxing.png', label: '킥복싱 · 격투기', style: { top: '300px', left: '30px' } },
-        { img: 'taegwondo.png', label: '주짓수 · 태권도', style: { top: '370px', right: '80px' } },
+        { img: 'crossfit.png', label: '크로스핏 · 스피닝', className: 'pos-0' },
+        { img: 'pilates.png', label: '필라테스 · 요가', className: 'pos-1' },
+        { img: 'ballet.png', label: '발레 · 댄스', className: 'pos-2' },
+        { img: 'fitness.png', label: '헬스', className: 'pos-3' },
+        { img: 'boxing.png', label: '킥복싱 · 격투기', className: 'pos-4' },
+        { img: 'taegwondo.png', label: '주짓수 · 태권도', className: 'pos-5' },
     ];
 
     return (

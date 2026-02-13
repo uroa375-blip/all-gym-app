@@ -3,6 +3,21 @@
     background: #ffffff;
     display: flex;
     flex-direction: column;
+    color: #000000;
+}
+
+.cart-page-container span,
+.cart-page-container p,
+.cart-page-container h1,
+.cart-page-container h2,
+.cart-page-container h3,
+.cart-page-container label,
+.cart-page-container div {
+    color: #000000;
+}
+
+.cart-page-container .purchase-btn {
+    color: #ffffff;
 }
 
 .header-tabs {
@@ -14,7 +29,7 @@
     z-index: 10;
 }
 
-.tab {
+.cart-page-container .tab {
     flex: 1;
     padding: 18px 0;
     text-align: center;
@@ -28,7 +43,7 @@
     position: relative;
 }
 
-.tab.active {
+.cart-page-container .tab.active {
     color: #000;
 }
 
@@ -77,114 +92,143 @@
     object-fit: cover;
 }
 
-.price-card {
-    background: #f8f8f8;
+.cart-page-container .price-card {
+    width: 342px;
+    background: #F0F0F0;
     border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 24px;
+    padding: 16px 18px;
+    margin: 0 auto 24px;
+    box-sizing: border-box;
 }
 
-.price-header {
+.price-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
 }
 
-.membership-badge {
+.m-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart-page-container .duration {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.cart-page-container .original-price {
     font-size: 12px;
-    color: #666;
+    color: #AAAAAA;
+    text-decoration: line-through;
+}
+
+.cart-page-container .discount-rate {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5865F2;
+}
+
+.m-price-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.cart-page-container .price-label {
+    font-size: 11px;
+    color: #999999;
+    margin-bottom: 2px;
+}
+
+.cart-page-container .final-price {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000000;
 }
 
 .delete-btn {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 4px;
+    padding: 0;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
 }
 
 .delete-icon {
-    width: 20px;
-    height: 20px;
-    color: #999;
+    width: 22px;
+    height: 22px;
+    opacity: 0.4;
 }
 
-.price-info {
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
-    margin-bottom: 16px;
+.cart-page-container .price-divider {
+    height: 0;
+    border-top: 1px solid #AAAAAA;
+    margin: 14px 0;
 }
 
-.duration {
-    font-size: 18px;
-    font-weight: 700;
-    color: #000;
-}
-
-.original-price {
-    font-size: 14px;
-    color: #999;
-    text-decoration: line-through;
-}
-
-.discount-rate {
-    font-size: 18px;
-    font-weight: 700;
-    color: #5865F2;
-}
-
-.final-price {
-    font-size: 24px;
-    font-weight: 700;
-    color: #000;
-}
-
-.quantity-control {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 0;
-    border-top: 1px solid #e0e0e0;
-}
-
-.quantity-label {
-    font-size: 14px;
-    color: #666;
-}
-
-.quantity-buttons {
+.quantity-section {
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-left: auto;
 }
 
-.quantity-btn {
-    width: 28px;
-    height: 28px;
-    border: 1px solid #d0d0d0;
+.quantity-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.quantity-input-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.quantity-number-box {
+    width: 30px;
+    height: 30px;
     background: #fff;
+    border: 1px solid #999999;
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    font-size: 14px;
-    color: #333;
-    transition: all 0.2s;
-}
-
-.quantity-btn:active {
-    background: #f0f0f0;
-}
-
-.quantity-value {
-    min-width: 30px;
-    text-align: center;
     font-size: 16px;
-    font-weight: 600;
-    color: #000;
+    font-weight: 500;
+    color: #333;
+}
+
+.quantity-arrows {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.q-arrow {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #555;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 14px;
+    line-height: 1;
+}
+
+.q-up {
+    margin-bottom: 0;
+}
+
+.q-down {
+    margin-top: 0;
 }
 
 .total-section {
@@ -214,21 +258,21 @@
 
 .promotion-text {
     margin-top: 20px;
-    padding: 16px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 8px;
+    padding: 16px 0;
     text-align: center;
     line-height: 1.6;
 }
 
-.promotion-text p {
-    font-size: 13px;
-    color: #fff;
+.cart-page-container .promotion-text p {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    color: #5568F5;
     font-weight: 500;
 }
 
-.promotion-highlight {
+.cart-page-container .promotion-highlight {
     font-weight: 700;
+    color: #5568F5;
 }
 
 .purchase-btn {

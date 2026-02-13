@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "SeoulNamsanEB";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/SeoulNamsanEB.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 .membership-container {
     width: 100%;
     background: linear-gradient(180deg, #1a1a1a 0%, #2a2a2a 100%);
@@ -166,8 +176,8 @@
 .membership-container .info-item span {
     font-size: 15px;
     color: #fff;
-    font-weight: 500;
-    font-family: 'SeoulNamsan', sans-serif;
+    font-weight: normal !important;
+    font-family: 'SeoulNamsanEB', sans-serif !important;
 }
 
 .membership-container .plus-circle {
@@ -180,7 +190,8 @@
     align-items: center;
     color: #fff;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: normal !important;
+    font-family: 'SeoulNamsanEB', sans-serif !important;
     margin-bottom: 25px;
 }
 

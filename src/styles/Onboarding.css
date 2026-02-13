@@ -5,6 +5,7 @@
     overflow-y: auto;
     width: 100%;
     background-color: #000;
+    cursor: pointer;
 }
 
 .onboarding-body .onboarding-container {

@@ -69,13 +69,7 @@ const Address = () => {
       {/* ✅ 지도 영역 (mapReady일 때 보이게) */}
       <div
         ref={mapElRef}
-        className="map-wrapper"
-        style={{
-          width: "100%",
-          height: "100%",
-          minHeight: "320px",      // ✅ 높이 없어서 안 보이는 경우 방지
-          display: mapReady ? "block" : "none",
-        }}
+        className={`map-wrapper ${mapReady ? 'map-active' : ''}`}
       />
 
       {/* ✅ 지도 실패/미로드 시 대체 이미지 */}
